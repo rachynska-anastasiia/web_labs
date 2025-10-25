@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeUp</title>
+</head>
+
+<body style="background-color: #C4F3CA;">
+    <!-- хедер-->
+    <%- include("partials/header") %>
+
+        <p class="pixel-text-big">Choose your course!</p>
+
+        <!--filter-->
+        <div>
+            <button class="filter-button" aria-label="See options">
+                <p class="pixel-text-small">category</p>
+                <img src="./pictures/down.png" alt="options">
+            </button>
+
+            <button class="filter-button" aria-label="See options">
+                <p class="pixel-text-small">difficulty</p>
+                <img src="./pictures/down.png" alt="options">
+            </button>
+
+            <button class="filter-button" aria-label="See options">
+                <p class="pixel-text-small">price</p>
+                <img src="./pictures/down.png" alt="options">
+            </button>
+        </div>
+
+        <!--courses-->
+        <div class="row">
+
+            <div class="col">
+                <%- include('partials/courseBigCard', { link: '/unity_what' , title: 'Unity what?' ,
+                    logo_path: './pictures/unity.png' , category: 'Game Development' , age: 15, weeks_number: 6,
+                    level: 'easy' , level_path: './pictures/easyLevel.png' }) %>
+            </div>
+
+            <div class="col">
+                <%- include('partials/courseBigCard', { link: '/computer_vision' , title: 'Computer Vision' ,
+                    logo_path: './pictures/computer_vision.png' , category: 'Machine Learning' , age: 15, weeks_number:
+                    8, level: 'hard' , level_path: './pictures/hardLevel.png' }) %>
+            </div>
+
+
+            <div class="col">
+                <%- include('partials/courseBigCard', { link: '/html_css' , title: 'HTML&CSS for noobs' ,
+                    logo_path: './pictures/html.png' , category: 'HTML&CSS' , age: 15, weeks_number: 4, level: 'easy' ,
+                    level_path: './pictures/easyLevel.png' }) %>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col">
+                <%- include('partials/courseBigCard', { link: '/computer_inside' ,
+                    title: 'What is inside your computer?' , logo_path: './pictures/computer.png' ,
+                    category: 'Computer sciense' , age: 15, weeks_number: 6, level: 'medium' ,
+                    level_path: './pictures/mediumLevel.png' }) %>
+            </div>
+
+
+            <div class="col">
+                <%- include('partials/courseBigCard', { link: '/cyber_detective' , title: 'Cyber Detective' ,
+                    logo_path: './pictures/magnifier_glass.png' , category: 'Cybersecurity BasicsS' , age: 15,
+                    weeks_number: 6, level: 'hard' , level_path: './pictures/hardLevel.png' }) %>
+            </div>
+
+            <div class="col">
+                <%- include('partials/courseBigCard', { link: '/pixel_art' , title: 'Pixel Alchemist' ,
+                    logo_path: './pictures/art.png' , category: 'Digital Art' , age: 14, weeks_number: 4, level: 'easy'
+                    , level_path: './pictures/easyLevel.png' }) %>
+            </div>
+
+        </div>
+
+        <!--футер-->
+        <%- include("partials/footer") %>
+</body>
+
+</html>

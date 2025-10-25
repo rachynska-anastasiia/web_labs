@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CodeUp</title>
+    </head>
+
+    <body style="background-color: #C4F3CA;">
+
+        <!-- хедер-->
+        <%- include("partials/header") %>
+
+        <!--основний опис курсу-->
+        <%- include("partials/course_descriptions", {title: 'HTML & CSS for noobs' , 
+        description: 'This is a beginner-friendly course designed for anyone who wants to start building websites from scratch. Step by step, you’ll learn what HTML and CSS are, how they work together, and how to create your very first web pages.',
+        det_1: 'No confusing jargon — everything is explained in plain, simple language.', det_2: 'Hands-on practice from the very first lesson.', 
+        det_3: 'Understand the basics of page structure: headings, text, images, and links.', det_4: 'Learn how to style your page with colors, fonts, spacing, borders, and buttons.', }) %>
+
+        <p class="main-text">By the end of the course, you’ll be able to build a small personal website and feel
+            confident taking your next steps in web development.</p>
+
+
+        <!--основні деталі курсу (ціна, рівень тощо)-->
+        <%- include("partials/lab1course_details", {level: 'easy' , price: '200' , week_num: '4' , age: '14' ,
+            category: 'HTML & CSS' }) %>
+
+        <!--навички, отримані після курсу-->
+        <%- include("partials/skill_after_course", {skill_1: 'How the web works and what role HTML & CSS play',
+            skill_2: 'Creating a basic webpage structure with HTML',
+            skill_3: 'Using headings, paragraphs, links, images, and lists',
+            skill_4: 'Styling pages with CSS: colors, fonts, spacing, borders, backgrounds',
+            skill_5: 'Building simple layouts with boxes, alignment, and positioning',
+            skill_6: 'How to make buttons and style them interactively'} ) %>
+
+        <a href="/enrollment" class="enroll_button">Get started</a>
+        
+        <!--інформація про вчителя курсу-->
+        <%- include("partials/teacher_info", {name: 'Alex Johnson' , profession : 'Frontend Developer & UI Mentor' , 
+            photo_of_teacher: './pictures/alex_teacher.png' , description: 'Alex has over 7 years of experience in web development, specializing in HTML5, CSS3, and modern frameworks. He has worked on building responsive interfaces for both startups and large-scale companies. In his courses, he focuses on hands-on practice and clear explanations, making even complex topics easy to understand. He has helped more than 3,000 students master frontend development and create their first real projects. His teaching philosophy: "Code should not only work - it should look great."' }) %>
+
+
+        <!--контент курсу-->
+        <h3>Course contebt</h3>
+        <div>
+            <details class="module">
+            <summary class="module-title">Getting started with HTML</summary>
+            <ul class="custom-list">
+                <li>How the web works</li>
+                <li>Basic page structure (&lt;html&gt;, &lt;head&gt;, &lt;body&gt;)</li>
+                <li>Headings, paragraphs, links, images</li>
+                <li>Hands-on: create your first simple page</li>
+            </ul>
+            </details>
+
+            <details class="module">
+                <summary class="module-title">Styling with CSS</summary>
+                <ul class="custom-list">
+                    <li>What is CSS and how it works</li>
+                    <li>Selectors, properties, and values</li>
+                    <li>Colors, fonts, and text styles</li>
+                    <li>Box model: margins, padding, borders</li>
+                    <li>Hands-on: style your first page</li>
+                </ul>
+            </details>
+
+            <details class="module">
+                <summary class="module-title">Layouts and components</summary>
+                <ul class="custom-list">
+                    <li>Display types: block, inline, flex</li>
+                    <li>Flexbox basics and alignment</li>
+                    <li>CSS Grid overview</li>
+                    <li>Building headers, footers, and cards</li>
+                    <li>Responsive design basics</li>
+                </ul>
+            </details>
+
+            <details class="module">
+                <summary class="module-title">Putting it all together</summary>
+                <ul class="custom-list">
+                    <li>Combining HTML and CSS effectively</li>
+                    <li>Organizing your code and files</li>
+                    <li>Mini project: create your personal homepage</li>
+                    <li>Tips for clean and readable code</li>
+                    <li>Next steps: where to learn more</li>
+                </ul>
+            </details>
+        </div>
+
+        <!--футер-->
+        <%- include("partials/footer") %>
+    </body>
+
+</html>

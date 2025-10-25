@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CodeUp</title>
+    </head>
+    <body style="background-color: #C4F3CA;">
+        <!-- хедер-->
+        <%- include("partials/header") %>
+
+        <!--зведена інформація про курс -->
+        <div class="col">
+            <a href="/html_css">
+                <p class="pixel-text-big">> HTML & CSS for beginners</p>
+                <div class="col">
+                    <p class="pixel-text-middle">Schedule:<br>Duration:<br>Difficulty:<br>Age:</p> 
+                </div>
+                <div class="col">
+                    <p class="pixel-text-small">flexible<br>4 weeks<br>easy<br>14+</p>
+                </div>
+            </a>
+
+            <!--отримання інформації про спосіб оплати-->
+            <div>
+                <p class="pixel-text-small">Choose payment method:</p>
+                <button class="circle-button" aria-label="Click to choose">
+                    <img src="./pictures/choose circle.png" alt="Click to choose">
+                </button>
+
+                <p class="pixel-text-small">every week: 50 $</p>
+                <button class="circle-button" aria-label="Click to choose">
+                    <img src="./pictures/choose circle.png" alt="Click to choose">
+                </button>
+            </div>
+
+            <p class="pixel-text-small">full: 200 $</p>
+            <button>
+                <p class="pixel-text-middle">Enroll</p>
+            </button>
+        </div>
+            
+        <div class="col">
+        <picture>
+            <source media="(min-width: 1024px)" srcset="/pictures/Group_12.png" type="image/png">
+            <source media="(min-width: 640px)" srcset="/pictures/Group_13.png" type="image/png">
+            <img src="/pictures/Group_13.png" alt="What are you waiting for?">
+        </picture>
+        </div>
+
+        <!--футер-->
+        <%- include("partials/footer") %>
+    </body>
+</html>
