@@ -7,55 +7,6 @@
     </head>
     <body style="background-color: #C4F3CA;">
 
-        <!--
-        <main>
-            <article itemscope itemtype="https://schema.org/Course">
-                <h2 itemprop="name">HTML & CSS</h2>
-                <p>
-                    <span itemprop="description">HTML & CSS for beginners</span>
-                    <span itemprop="timeRequired">4 weeks</span>
-                    <span itemprop="price">200$</span>
-                </p>
-            </article>
-
-            <article itemscope itemtype="https://schema.org/Course">
-                <h2 itemprop="name">Computer Vision</h2>
-                <p>
-                    <span itemprop="description">Basics of Computer Vision</span>
-                    <span itemprop="timeRequired">8 weeks</span>
-                    <span itemprop="price">200$</span>
-                </p>
-            </article>
-
-            <article itemscope itemtype="https://schema.org/Course">
-                <h2 itemprop="name">Unity</h2>
-                <p>
-                    <span itemprop="description">Unity for beginners</span>
-                    <span itemprop="timeRequired">6 weeks</span>
-                    <span itemprop="price">200$</span>
-                </p>
-            </article>
-
-            <article itemscope itemtype="https://schema.org/Course">
-                <h2 itemprop="name">Computer Architecture</h2>
-                <p>
-                    <span itemprop="description">Computer architecture for beginners</span>
-                    <span itemprop="timeRequired">4 weeks</span>
-                    <span itemprop="price">200$</span>
-                </p>
-            </article>
-
-            <article itemscope itemtype="https://schema.org/Course">
-                <h2 itemprop="name">HTML & CSS</h2>
-                <p>
-                    <span itemprop="description">HTML & CSS for beginners</span>
-                    <span itemprop="timeRequired">4 weeks</span>
-                    <span itemprop="price">200$</span>
-                </p>
-            </article>
-        </main>
-        -->
-
         <!-- хедер-->
         <%- include("partials/header") %>
 
@@ -129,48 +80,55 @@
 
         <!--categories-->
         <section>
-            <h2 class="pixel-text-big">Our top categories</h2>
-            <a href="/courses">Click to see more</a>
+            <h2 class="pixel-text-big">Our top сourses</h2>
+            <a href="/courses" class="pixel-text-middle">Click to see more</a>
+
             <div>
-                <button class="left-right-bbutton" aria-label="Move to left"><img src="/pictures/left.png" alt="More"></button>
-    
-                <div class="categories-field">
-                    <picture>
-                        <source media="(min-width: 1024px)" srcset="/pictures/GameDevIcon.png" type="image/png">
-                        <source media="(min-width: 640px)" srcset="/pictures/small_gamedev.png" type="image/png">
-                        <img src="/pictures/small_gamedev.png" width="50" height="50" alt="GameDevIcon">
-                    </picture>
-                    <p class="pixel-text-middle">GameDev</p>
+                <button class="left-right-bbutton" aria-label="Move to left">
+                    <img src="./pictures/left.png" alt="More">
+                </button>
+
+                <div itemscope itemtype="https://schema.org/Course">
+                    <a itemprop="url" href="/unity_what" class="carousel-item">
+                        <p itemprop="name" class="pixel-text-middle">Unity what?</p>
+                        <p itemprop="timeRequired" class="pixel-text-small">>6 weeks</p>
+                        <p itemprop="description"class="pixel-text-small">easy</p>
+                        <img src="./pictures/easyLevel.png" alt="level">
+                    </a>
                 </div>
-    
-                <div class="categories-field">
-                    <picture>
-                        <source media="(min-width: 1024px)" srcset="/pictures/MLIcon.png" type="image/png">
-                        <source media="(min-width: 640px)" srcset="/pictures/small_ml.png" type="image/png">
-                        <img src="/pictures/small_ml.png" width="50" height="50" alt="MLIcon">
-                    </picture>
-                    <p class="pixel-text-middle">Machine Learning</p>
+                
+                <div itemscope itemtype="https://schema.org/Course">
+                    <a itemprop="url" href="/computer_vision" class="carousel-item">
+                        <p itemprop="name" class="pixel-text-middle">Computer Vision</p>
+                        <p itemprop="timeRequired" class="pixel-text-small">>4 weeks</p>
+                        <p itemprop="description" class="pixel-text-small">hard</p>
+                        <img src="./pictures/hardLevel.png" alt="level">
+                    </a>
                 </div>
-    
-                <div class="categories-field">
-                    <picture>
-                        <source media="(min-width: 1024px)" srcset="/pictures/tag.png" type="image/png">
-                        <source media="(min-width: 640px)" srcset="/pictures/small_tag.png" type="image/png">
-                        <img src="/pictures/small_tag.png" width="50" height="50" alt="TagIcon">
-                    </picture>
-                    <p class="pixel-text-middle">HTML & CSS</p>
+
+
+                <div itemscope itemtype="https://schema.org/Course">
+                    <a itemprop="url" href="/html_css" class="carousel-item">
+                        <p itemprop="name" class="pixel-text-middle">HTML & CSS for noobs</p>
+                        <p itemprop="timeRequired" class="pixel-text-small">>4 weeks</p>
+                        <p itemprop="description" class="pixel-text-small">easy</p>
+                        <img src="./pictures/easyLevel.png" alt="level">
+                    </a>
                 </div>
-    
-                <div class="categories-field">
-                    <picture>
-                        <source media="(min-width: 1024px)" srcset="/pictures/ComputerScienseIcon.png" type="image/png">
-                        <source media="(min-width: 640px)" srcset="/pictures/small_cs.png" type="image/png">
-                        <img src="/pictures/small_cs.png" width="50" height="50" alt="ComputerScienseIcon">
-                    </picture>
-                    <p class="pixel-text-middle">Computer Sciense</p>
+
+                <div itemscope itemtype="https://schema.org/Course">
+                    <a itemprop="url" href="/computer_inside" class="carousel-item">
+                        <p itemprop="name" class="pixel-text-middle">What's inside your computer?</p>
+                        <p itemprop="timeRequired" class="pixel-text-small">>4 weeks</p>
+                        <p itemprop="description" class="pixel-text-small">medium</p>
+                        <img src="./pictures/mediumLevel.png" alt="level">
+                    </a>
                 </div>
-    
-                <button class="left-right-bbutton" aria-label="Move to right"><img src="./pictures/right.png" alt="More"></button>  
+
+                <button class="left-right-bbutton" aria-label="Move to right">
+                    <img src="./pictures/right.png" alt="More">
+                </button>
+                
             </div>
         </section>
         
