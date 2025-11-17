@@ -1,0 +1,64 @@
+@use "../abstracts/index" as *;
+@use "../abstracts/mixins" as *;
+
+.slogan {
+    @include header-font(64px, $color-accent, 400);
+}
+
+.statistics-element{
+    display: flex;
+}
+
+.show-statistics{
+    display: flex;
+}
+
+.pixel-text-big{
+    @include header-font(32px, $color-accent, 400);
+}
+
+.main-advantages{
+    display: flex;
+    @include main-text-font(32px, $color-accent, 400);
+}
+
+ul.custom-list li{
+    list-style: none;
+    padding-left: 30px;
+    background: url("../pictures/choose circle.png") no-repeat left center;
+    background-size: 20px;
+    //@include header-font(14px, $color-accent, 400);
+}
+
+.pixel-text-middle{
+    @include header-font(20px, $color-accent, 400);
+}
+
+.left-right-bbutton{
+    display: flex;
+}
+
+.carousel-item{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    background: $color-secondary;
+    border: 4px solid $color-accent;
+    border-radius: 12px;
+
+    padding: 20px;
+    text-decoration: none;
+    color: $color-white;
+    
+    width: 260px;
+    height: 150px;
+}
+
+.pixel-text-small{
+    @include header-font(14px, $color-accent, 400);
+}
+
+.main-text{
+    @include main-text-font(20px, $color-accent, 400);
+}

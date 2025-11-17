@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -45,6 +46,88 @@
   color: #FFFFFF;
   font-weight: 400;
   font-style: normal;
+}
+
+.slogan {
+  font-family: "Press Start 2P", cursive;
+  font-size: 64px;
+  color: #003300;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.statistics-element {
+  display: flex;
+}
+
+.show-statistics {
+  display: flex;
+}
+
+.pixel-text-big {
+  font-family: "Press Start 2P", cursive;
+  font-size: 32px;
+  color: #003300;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.main-advantages {
+  display: flex;
+  font-family: "Quantico", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 32px;
+  color: #003300;
+}
+
+ul.custom-list li {
+  list-style: none;
+  padding-left: 30px;
+  background: url("../pictures/choose circle.png") no-repeat left center;
+  background-size: 20px;
+}
+
+.pixel-text-middle {
+  font-family: "Press Start 2P", cursive;
+  font-size: 20px;
+  color: #003300;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.left-right-bbutton {
+  display: flex;
+}
+
+.carousel-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #539844;
+  border: 4px solid #003300;
+  border-radius: 12px;
+  padding: 20px;
+  text-decoration: none;
+  color: #FFFFFF;
+  width: 260px;
+  height: 150px;
+}
+
+.pixel-text-small {
+  font-family: "Press Start 2P", cursive;
+  font-size: 14px;
+  color: #003300;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.main-text {
+  font-family: "Quantico", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  color: #003300;
 }
 
 /*
