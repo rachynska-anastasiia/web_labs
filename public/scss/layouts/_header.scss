@@ -3,40 +3,89 @@
 
 .row {
     display: flex;
-    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 10%;
 }
 
 .col {
     display: flex;
     flex-wrap: wrap;
 }
+
+.header-container .col{
+    display: flex;
+    align-items: center;
+}
+
 .header-container {
     display: flex;
     top: 0;
     left: 0;
     right: 0;
     justify-content: space-between;
-    align-items: center;
+    padding: 5px;
+    align-items: baseline;
     flex-wrap: wrap;
-    padding: 18px 40px;
     position: fixed;
-    
+    margin-right: 15px;//???????????????????
     width: 100%;
     background-color: $color-secondary;
+
     h1{
-        @include header-font(24px, $color-white, 400);
+        @include header-font(20px, $color-white, 400);
     }
+
+    img{
+        width: 25px;
+        height: 25px;
+    }
+
     button{
         background-color: $color-secondary;
         border: none;
         cursor: pointer;
+        
     }
-    .move-page-button a{
-        display: flex;
-        align-items: center;
-        gap: 10px;
+
+    a{
+        @include header-font(20px, $color-white, 400);
         text-decoration: none;
-        color: $color-white;
-        @include header-font(16px, $color-white, 400);
+        margin-left: 15px;
     }
+
+}
+
+.move-page-button a{
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    text-decoration: none;
+    color: $color-white;
+    @include header-font(16px, $color-white, 400);
+
+    img{
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    width: 100%;
+    background-color: $color-accent;
+
+    margin: 0;
+    padding: 0;
+}
+
+.footer-text-big{
+    @include header-font(20px, $color-white, 400);
+}
+
+.footer-text-small{
+    @include header-font(12px, $color-white, 400);
 }

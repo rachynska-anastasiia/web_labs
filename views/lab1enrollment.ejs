@@ -11,7 +11,7 @@
         <%- include("partials/header") %>
 
         <!--зведена інформація про курс -->
-        <div class="col">
+        <!--<div class="course_enroll">
             <a href="/html_css">
                 <p class="pixel-text-big">> HTML & CSS for beginners</p>
                 <div class="col">
@@ -21,35 +21,63 @@
                     <p class="pixel-text-small">flexible<br>4 weeks<br>easy<br>14+</p>
                 </div>
             </a>
+        </div>-->
 
-            <!--отримання інформації про спосіб оплати-->
-            <div>
-                <p class="pixel-text-small">Choose payment method:</p>
-                <button class="circle-button" aria-label="Click to choose">
-                    <img src="./pictures/choose circle.png" alt="Click to choose">
-                </button>
-
-                <p class="pixel-text-small">every week: 50 $</p>
-                <button class="circle-button" aria-label="Click to choose">
-                    <img src="./pictures/choose circle.png" alt="Click to choose">
-                </button>
-            </div>
-
-            <p class="pixel-text-small">full: 200 $</p>
-            <button>
-                <p class="pixel-text-middle">Enroll</p>
-            </button>
-        </div>
+    <section class="margin_left">
+        <div class="row-enrol">
+            <section class="left-col-gen">
             
-        <div class="col">
-        <picture>
-            <source media="(min-width: 1024px)" srcset="/pictures/Group_12.png" type="image/png">
-            <source media="(min-width: 640px)" srcset="/pictures/Group_13.png" type="image/png">
-            <img src="/pictures/Group_13.png" alt="What are you waiting for?">
-        </picture>
+                <a href="/html_css" class="course_enroll">
+                    <p class="pixel-text-big">> HTML & CSS for beginners</p>
+                    <div class="row-enrol">
+                            <div class="left-col">
+                                <p class="pixel-text-middle">
+                                    Schedule:<br>Duration:<br>Difficulty:<br>Age:
+                                </p>
+                            </div>
+                            <div class="right-col">
+                                <p class="pixel-text-small">
+                                    flexible<br>4 weeks<br>easy<br>14+
+                                </p>
+                            </div>
+                    </div> 
+                </a>
+        
+                    <!--отримання інформації про спосіб оплати-->
+                    <p class="pixel-text-small">Choose payment method:</p>
+                    <div class="col">
+                        <button class="circle-button" aria-label="Click to choose">
+                            <img src="./pictures/choose circle.png" alt="Click to choose">
+                        </button>
+                        <p class="pixel-text-small">every week: 50 $</p>
+                    </div>
+        
+                    <div class="col">
+                        <button class="circle-button" aria-label="Click to choose">
+                            <img src="./pictures/choose circle.png" alt="Click to choose">
+                        </button>
+                        <p class="pixel-text-small">full: 200 $</p>
+                    </div>
+        
+                    <button class="enroll-btn">
+                        <p class="pixel-text-middle">Enroll</p>
+                    </button>
+                
+                
+                </section>
+        
+                <section class="right-col-pic">
+                    <picture>
+                        <source media="(min-width: 1024px)" srcset="/pictures/Group_12.png" type="image/png">
+                        <source media="(min-width: 640px)" srcset="/pictures/Group_13.png" type="image/png">
+                        <img src="/pictures/Group_13.png" alt="What are you waiting for?">
+                    </picture>
+                </section>
         </div>
-
-        <!--футер-->
-        <%- include("partials/footer") %>
+        
+    </section>
+        
+    <!--футер-->
+    <%- include("partials/footer") %>
     </body>
 </html>

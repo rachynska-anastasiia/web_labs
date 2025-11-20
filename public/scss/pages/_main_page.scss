@@ -2,15 +2,79 @@
 @use "../abstracts/mixins" as *;
 
 .slogan {
+    padding-left: 20%;
     @include header-font(64px, $color-accent, 400);
 }
 
-.statistics-element{
+section.row {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: clamp(20px, 8vw, 160px);
+}
+
+
+section.row picture {
+    margin-left: auto;
+    margin-top: 40px;
+}
+
+
+.statistics-element{
+
+    flex: 1;  
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $color-primary;
+    gap: 5px;
+    border: 4px solid $color-accent;
+    border-radius: 15px;
+    padding: 14px 18px;
+}
+
+.statistics-element p {
+    margin: 0;
+}
+
+.statistics-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    width: 100%;
+    height: 56px; 
+}
+
+.statistics-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 56px;
+    width: 100%;
+}
+
+.statistics-bottom p {
+    line-height: 1;  
+    margin: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.statistics-element img {
+    height: auto;
+    max-width: 100px;
 }
 
 .show-statistics{
     display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 20px;
+    background-color: $color-secondary;
+    padding-inline: clamp(10px, 5vw, 80px);
+    padding-block: 30px;
 }
 
 .pixel-text-big{
@@ -27,7 +91,6 @@ ul.custom-list li{
     padding-left: 30px;
     background: url("../pictures/choose circle.png") no-repeat left center;
     background-size: 20px;
-    //@include header-font(14px, $color-accent, 400);
 }
 
 .pixel-text-middle{
@@ -36,6 +99,10 @@ ul.custom-list li{
 
 .left-right-bbutton{
     display: flex;
+}
+
+.carousel{
+    justify-items: space-between;
 }
 
 .carousel-item{
@@ -51,8 +118,8 @@ ul.custom-list li{
     text-decoration: none;
     color: $color-white;
     
-    width: 260px;
-    height: 150px;
+    width: 150px;
+    height: 75px;
 }
 
 .pixel-text-small{

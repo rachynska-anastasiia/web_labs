@@ -1,0 +1,49 @@
+@use "../abstracts/index" as *;
+@use "../abstracts/mixins" as *;
+
+.call_to_action{
+    padding-top: 50px;
+    text-align: center;
+}
+
+.filters{
+    display: flex;
+
+}
+.filter-button{
+    background: $color-secondary;
+    border: 4px solid $color-accent;
+    border-radius: 6px;
+    text-align: center;
+    cursor: pointer;
+    
+}
+
+.big-course-block{
+    background: $color-secondary;
+    border: 4px solid $color-accent;
+    border-radius: 6px;
+    text-align: center;
+    cursor: pointer;
+
+    a{
+        text-decoration: none;
+        @include header-font(20px, $color-white, 400);
+    }
+    
+}
+
+.course-page-discriptions
+{
+    text-align: left;
+    padding-left: 10%
+}
+
+pixel-text-middle-white{
+    @include header-font(20px, $color-white, 400);
+    
+}
+
+.pixel-text-small-white{
+    @include header-font(14px, $color-white, 400);
+}
