@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/main.css">
+        <title>CodeUp</title>
+    </head>
+
+    <body style="background-color: #C4F3CA;">
+
+        <!-- хедер-->
+        <%- include("partials/header") %>
+
+        <!--основний опис курсу-->
+    <div class="start course-details j">
+        <div class="start course-details-main">
+            <section >
+                <h2 class="pixel-text-middle">&gt;<%= title %></h2>
+                    <p class="main-text"><%= description %></p>
+                    <ul>
+                        <li class="main-text"><%= det_1 %></li>
+                        <li class="main-text"><%= det_2 %></li>
+                        <li class="main-text"><%= det_3 %></li>
+                        <li class="main-text"><%= det_4 %></li>
+                    </ul>
+            </section>
+    
+    
+            <!--основні деталі курсу (ціна, рівень тощо)-->
+            <section class="col">
+                <div class="col">
+                    <ul class="custom-list">
+                        <li class="pixel-text-middle">Shedule:<span class="pixel-text-small">flexible</span></li>
+                        <li class="pixel-text-middle">Difficulty:<span class="pixel-text-small"><%= level %></span></li>
+                        <li class="pixel-text-middle">Total cost:<span class="pixel-text-small">
+                                <%= price %>$
+                            </span></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <ul class="custom-list">
+                        <li class="pixel-text-middle">Duration:<span class="pixel-text-small">
+                                <%= week_num %> weeks
+                            </span></li>
+                        <li class="pixel-text-middle">Age:<span class="pixel-text-small">
+                                <%= age %>+
+                            </span></li>
+                        <li class="pixel-text-middle">Category:<span class="pixel-text-small">
+                                <%= category %>
+                            </span></li>
+                    </ul>
+                </div>
+            </section>
+    
+            <!--навички, отримані після курсу-->
+            <section>
+                <h3 class="pixel-text-middle">What you’ll learn</h3>
+                <ul class="custom-list">
+                    <li class="main-text">
+                        <%= skill_1 %>
+                    </li>
+                    <li class="main-text">
+                        <%= skill_2 %></li>
+                    <li class="main-text">
+                        <%= skill_3 %></li>
+                    <li class="main-text">
+                        <%= skill_4 %></li>
+                    <li class="main-text">
+                        <%= skill_5 %></li>
+                    <li class="main-text">
+                        <%= skill_6 %></li>
+                </ul>
+            </section>
+        </div>
+
+        <!--інформація про вчителя курсу-->
+
+        <section class="start course-details-mentor">
+            <h3 class="c pixel-text-middle-white">
+                <%= name %>
+            </h3>
+            <p class="c pixel-text-small-white">
+                <%= profession %>
+            </p>
+            <div class="c">
+                <img src="<%= photo_of_teacher %>" alt="Photo of <%= name %>">
+            </div>
+            <p class="j main-text-white">
+                <%= description %>
+            </p>
+        </section>
+    </div>
+    
+        
+
+        <a href="/enrollment" class="enroll_button pixel-text-middle-white">Get started</a>
+        
+        
+
+        <!--контент курсу-->
+        <div class="c">
+            <h3 class="pixel-text-middle">Course content</h3>
+        </div>
+        
+        <div>
+            <details class="module">
+            <summary class="module-title">Under constructions</summary>
+            <ul class="custom-list">
+                <li class="main-text">Under constructions</li>
+                <li class="main-text">Under constructions</li>
+                <li class="main-text">Under constructions</li>
+            </ul>
+            </details>
+
+            <details class="module">
+                <summary class="module-title">Under constructions</summary>
+                <ul class="custom-list">
+                    <li class="main-text">Under constructions</li>
+                    <li class="main-text">Under constructions</li>
+                    <li class="main-text">Under constructions</li>
+                </ul>
+            </details>
+
+            <details class="module">
+                <summary class="module-title">Under constructions</summary>
+                <ul class="custom-list">
+                    <li class="main-text">Under constructions</li>
+                    <li class="main-text">Under constructions</li>
+                    <li class="main-text">Under constructions</li>
+                </ul>
+            </details>
+
+            <details class="module">
+                <summary class="module-title">Under constructions</summary>
+                <ul class="custom-list">
+                    <li class="main-text">Under constructions</li>
+                    <li class="main-text">Under constructions</li>
+                    <li class="main-text">Under constructions</li>
+                </ul>
+            </details>
+        </div>
+
+        <!--футер-->
+        <%- include("partials/footer") %>
+    </body>
+
+</html>

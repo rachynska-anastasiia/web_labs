@@ -1,91 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/css/main.css">
-        <title>CodeUp</title>
-    </head>
-
-    <body style="background-color: #C4F3CA;">
-
-        <!-- хедер-->
-        <%- include("partials/header") %>
-
-        <!--основний опис курсу-->
-        <%- include("partials/course_descriptions", {title: 'Computer Vision' , 
-        description: 'This course explores how computers can “see” and understand images. You’ll discover the foundations of image processing, pattern recognition, and artificial intelligence used in modern applications — from face detection to self-driving cars.',
-        det_1: 'Step-by-step introduction to computer vision concepts.', det_2: 'Real-world examples with visual tasks.', 
-        det_3: 'No previous AI experience required.', det_4: 'Project-focused learning.', }) %>
-
-        <!--основні деталі курсу (ціна, рівень тощо)-->
-        <%- include("partials/lab1course_details", {level: 'hard' , price: '200' , week_num: '8' , age: '18' ,
-            category: 'Machine learning' }) %>
-
-        <!--навички, отримані після курсу-->
-        <%- include("partials/skill_after_course", {skill_1: 'Basics of digital images and pixels',
-            skill_2: 'Image filtering, color models, and transformations',
-            skill_3: 'Feature detection and object recognition',
-            skill_4: 'Introduction to neural networks and CNNs',
-            skill_5: 'Practical tasks using OpenCV or similar tools',
-            skill_6: 'How vision powers modern technologies (AR, robotics, etc.)'} ) %>
-
-        <a href="/enrollment" class="enroll_button">Get started</a>
-
-        <!--інформація про вчителя курсу-->
-        <%- include("partials/teacher_info", {name: 'Dr. Lina Chen' , profession : 'AI Researcher & Computer Vision Expert' , 
-            photo_of_teacher: './pictures/alex_teacher.png' , description: 'Lina holds a PhD in Computer Vision and has worked on machine learning systems for autonomous vehicles. She believes that the best way to learn AI is through experimentation and visualization. Her philosophy: "See it, code it, make it recognize."' }) %>
-
-
-        <!--контент курсу-->
-        <h3>Course contebt</h3>
-        <div>
-            <details class="module">
-                <summary class="module-title">Introduction to computer vision</summary>
-                <ul class="custom-list">
-                    <li>Under development</li>
-                </ul>
-            </details>
-
-            <details class="module">
-                <summary class="module-title">Working with images and pixels</summary>
-                <ul class="custom-list">
-                    <li>Under development</li>
-                </ul>
-            </details>
-
-            <details class="module">
-                <summary class="module-title">Filters and transformations</summary>
-                <ul class="custom-list">
-                    <li>Under development</li>
-                </ul>
-            </details>
-
-            <details class="module">
-                <summary class="module-title">Object detection and tracking</summary>
-                <ul class="custom-list">
-                    <li>Under development</li>
-                </ul>
-            </details>
-
-
-            <details class="module">
-                <summary class="module-title">Neural networks for vision</summary>
-                <ul class="custom-list">
-                    <li>Under development</li>
-                </ul>
-            </details>
-
-            <details class="module">
-                <summary class="module-title">Real-world applications and mini-project</summary>
-                <ul class="custom-list">
-                    <li>Under development</li>
-                </ul>
-            </details>
-        </div>
-
-        <!--футер-->
-        <%- include("partials/footer") %>
-    </body>
-
-</html>
+<%- include("template_course.ejs", {title: 'Computer Vision' , 
+description: 'This course explores how computers can “see” and understand images. You’ll discover the foundations of image processing, pattern recognition, and artificial intelligence used in modern applications — from face detection to self-driving cars.',
+det_1: 'Step-by-step introduction to computer vision concepts.', 
+det_2: 'Real-world examples with visual tasks.', 
+det_3: 'No previous AI experience required.', 
+det_4: 'Project-focused learning.',
+level: 'hard' , 
+price: '200' , 
+week_num: '8' , 
+age: '18' ,
+category: 'Machine learning',
+skill_1: 'Basics of digital images and pixels',
+skill_2: 'Image filtering, color models, and transformations',
+skill_3: 'Feature detection and object recognition',
+skill_4: 'Introduction to neural networks and CNNs',
+skill_5: 'Practical tasks using OpenCV or similar tools',
+skill_6: 'How vision powers modern technologies (AR, robotics, etc.)',
+name: 'Dr. Lina Chen' , 
+profession : 'AI Researcher & Computer Vision Expert' , 
+photo_of_teacher: './pictures/alex_teacher.png' , 
+description: 'Lina holds a PhD in Computer Vision and has worked on machine learning systems for autonomous vehicles. She believes that the best way to learn AI is through experimentation and visualization. Her philosophy: "See it, code it, make it recognize."' }) %>

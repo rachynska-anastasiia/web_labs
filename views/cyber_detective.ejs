@@ -1,90 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/css/main.css">
-        <title>CodeUp</title>
-    </head>
-
-    <body style="background-color: #C4F3CA;">
-
-        <!-- хедер-->
-        <%- include("partials/header") %>
-
-        <!--основний опис курсу-->
-        <%- include("partials/course_descriptions", {title: 'Cyber Detective' , 
-        description: 'A practical introduction to cybersecurity. Learn how hackers think, how systems are attacked, and most importantly — how to defend them. You’ll practice spotting vulnerabilities, creating secure passwords, and understanding digital footprints.',
-        det_1: 'Hands-on tasks with real-world examples.', det_2: 'Learn ethical hacking fundamentals.', 
-        det_3: 'Build awareness of online security threats.', det_4: 'Great for beginners with curiosity and logic.', }) %>
-
-        <!--основні деталі курсу (ціна, рівень тощо)-->
-        <%- include("partials/lab1course_details", {level: 'hard' , price: '200' , week_num: '8' , age: '18' ,
-            category: 'Machine learning' }) %>
-
-        <!--навички, отримані після курсу-->
-        <%- include("partials/skill_after_course", {skill_1: 'What cybersecurity is and why it matters',
-            skill_2: 'Common attack types (phishing, malware, brute force)',
-            skill_3: 'Safe browsing and password management',
-            skill_4: 'Network basics and data encryption',
-            skill_5: 'Ethical hacking tools and mindset',
-            skill_6: 'Protecting personal and organizational data'} ) %>
-
-        <a href="/enrollment" class="enroll_button">Get started</a>
-        
-        <!--інформація про вчителя курсу-->
-        <%- include("partials/teacher_info", {name: 'Ethan Cole' , profession : 'Cybersecurity Specialist & Ethical Hacker' , 
-            photo_of_teacher: './pictures/alex_teacher.png' , description: 'Ethan has worked in security consulting and incident response for over a decade. He trains students to think like defenders, not just users. His rule: "Awareness is the first layer of defense."' }) %>
-
-
-        <!--контент курсу-->
-        <h3>Course contebt</h3>
-        <div>
-            <details class="module">
-                <summary class="module-title">Introduction to cybersecurity</summary>
-                <ul class="custom-list">
-                    <li>Under development</li>
-                </ul>
-            </details>
-
-            <details class="module">
-                <summary class="module-title">Common threats and attack methods</summary>
-                <ul class="custom-list">
-                    <li>Under development</li>
-                </ul>
-            </details>
-
-            <details class="module">
-                <summary class="module-title">Network security and encryption</summary>
-                <ul class="custom-list">
-                    <li>Under development</li>
-                </ul>
-            </details>
-
-            <details class="module">
-                <summary class="module-title">Ethical hacking and defense techniques</summary>
-                <ul class="custom-list">
-                    <li>Under development</li>
-                </ul>
-            </details>
-
-            <details class="module">
-                <summary class="module-title">Safe online behavior and data protection</summary>
-                <ul class="custom-list">
-                    <li>Under development</li>
-                </ul>
-            </details>
-
-            <details class="module">
-                <summary class="module-title">Final simulation and best practices</summary>
-                <ul class="custom-list">
-                    <li>Under development</li>
-                </ul>
-            </details>
-        </div>
-
-        <!--футер-->
-        <%- include("partials/footer") %>
-    </body>
-
-</html>
+<%- include("template_course.ejs", {title: 'Cyber Detective' , 
+description: 'A practical introduction to cybersecurity. Learn how hackers think, how systems are attacked, and most importantly — how to defend them. You’ll practice spotting vulnerabilities, creating secure passwords, and understanding digital footprints.',
+det_1: 'Hands-on tasks with real-world examples.', 
+det_2: 'Learn ethical hacking fundamentals.', 
+det_3: 'Build awareness of online security threats.', 
+det_4: 'Great for beginners with curiosity and logic.',
+level: 'hard' , 
+price: '200' , 
+week_num: '8' , 
+age: '18' ,
+category: 'Machine learning',
+skill_1: 'What cybersecurity is and why it matters',
+skill_2: 'Common attack types (phishing, malware, brute force)',
+skill_3: 'Safe browsing and password management',
+skill_4: 'Network basics and data encryption',
+skill_5: 'Ethical hacking tools and mindset',
+skill_6: 'Protecting personal and organizational data',
+name: 'Ethan Cole' , 
+profession : 'Cybersecurity Specialist & Ethical Hacker' , 
+photo_of_teacher: './pictures/alex_teacher.png' ,
+description: 'Ethan has worked in security consulting and incident response for over a decade. He trains students to think like defenders, not just users. His rule: "Awareness is the first layer of defense."'}) %>

@@ -1,0 +1,40 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/colors" as *;
+
+.c{
+    text-align: center;
+    align-items: center;
+}
+
+.j{
+    text-align: justify;
+}
+
+.pixel-text-small{
+    @include header-font(14px, $color-accent, 400);
+}
+
+.main-text{
+    @include main-text-font(20px, $color-accent, 400);
+}
+
+.main-text-white{
+    @include main-text-font(20px, $color-white, 400);
+}
+
+.pixel-text-middle{
+    @include header-font(20px, $color-accent, 400);
+}
+
+.pixel-text-middle-white{
+    @include header-font(20px, $color-white, 400);
+    
+}
+
+.pixel-text-small-white{
+    @include header-font(14px, $color-white, 400);
+}
+
+.pixel-text-big{
+    @include header-font(32px, $color-accent, 400);
+}

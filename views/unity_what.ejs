@@ -1,76 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/css/main.css">
-        <title>CodeUp</title>
-    </head>
-
-    <body style="background-color: #C4F3CA;">
-
-        <!-- хедер-->
-        <%- include("partials/header") %>
-
-        <!--основний опис курсу-->
-        <%- include("partials/course_descriptions", {title: 'Unity what?' , 
-        description: 'This course introduces you to the world of game development using Unity - one of the most popular engines for creating 2D and 3D games. You’ll learn how games are structured, how physics, graphics, and logic come together, and how to build your first playable project.',
-        det_1: 'Beginner-friendly explanations of complex tools.', det_2: 'Real examples from popular games.', 
-        det_3: 'Hands-on project: build and play your own mini-game.', det_4: 'Learn by experimenting and fixing real issues.', }) %>
-
-        <!--основні деталі курсу (ціна, рівень тощо)-->
-        <%- include("partials/lab1course_details", {level: 'easy' , price: '200' , week_num: '6' , age: '15' ,
-            category: 'Game Developnent' }) %>
-
-        <!--навички, отримані після курсу-->
-        <%- include("partials/skill_after_course", {skill_1: 'How a game engine works',
-            skill_2: 'Setting up Unity and creating your first project',
-            skill_3: 'Working with game objects and scenes',
-            skill_4: 'Basic physics and interactions',
-            skill_5: 'Adding sprites, sounds, and simple effects',
-            skill_6: 'Writing basic scripts with C#'} ) %>
-
-        <a href="/enrollment" class="enroll_button">Get started</a>
-
-        <!--інформація про вчителя курсу-->
-        <%- include("partials/teacher_info", {name: 'Sam Rivera' , profession : 'Game Developer & Unity Mentor' , 
-            photo_of_teacher: './pictures/alex_teacher.png' , description: 'Sam has over 8 years of experience creating indie and educational games. He focuses on helping beginners understand how to turn ideas into interactive worlds. He has guided hundreds of students to publish their first playable projects. His teaching motto: "You don’t just play games — you create them."' }) %>
-
-
-        <!--контент курсу-->
-        <h3>Course contebt</h3>
-        <div>
-            <details class="module">
-            <summary class="module-title">Getting started with Unity</summary>
-            <ul class="custom-list">
-                <li>Under development</li>
-            </ul>
-            </details>
-
-            <details class="module">
-                <summary class="module-title">Scenes, objects, and components</summary>
-                <ul class="custom-list">
-                    <li>Under development</li>
-                </ul>
-            </details>
-
-            <details class="module">
-                <summary class="module-title">Physics and collisions</summary>
-                <ul class="custom-list">
-                    <li>Under development</li>
-                </ul>
-            </details>
-
-            <details class="module">
-                <summary class="module-title">Introduction to C# scripting</summary>
-                <ul class="custom-list">
-                    <li>Under development</li>
-                </ul>
-            </details>
-        </div>
-
-        <!--футер-->
-        <%- include("partials/footer") %>
-    </body>
-
-</html>
+<%- include("template_course.ejs", {title: 'Unity what?', 
+description: 'This course introduces you to the world of game development using Unity - one of the most popular engines for creating 2D and 3D games. You’ll learn how games are structured, how physics, graphics, and logic come together, and how to build your first playable project.',
+det_1: 'Beginner-friendly explanations of complex tools.', 
+det_2: 'Real examples from popular games.', 
+det_3: 'Hands-on project: build and play your own mini-game.', 
+det_4: 'Learn by experimenting and fixing real issues.', 
+level: 'easy' , 
+price: '200' , 
+week_num: '6' , 
+age: '15' ,
+category: 'Game Developnent',
+skill_1: 'How a game engine works',
+skill_2: 'Setting up Unity and creating your first project',
+skill_3: 'Working with game objects and scenes',
+skill_4: 'Basic physics and interactions',
+skill_5: 'Adding sprites, sounds, and simple effects',
+skill_6: 'Writing basic scripts with C#',
+name: 'Sam Rivera' , profession : 'Game Developer & Unity Mentor' , 
+photo_of_teacher: './pictures/alex_teacher.png' , 
+description: 'Sam has over 8 years of experience creating indie and educational games. He focuses on helping beginners understand how to turn ideas into interactive worlds. He has guided hundreds of students to publish their first playable projects. His teaching motto: "You don’t just play games — you create them."'
+}) %>

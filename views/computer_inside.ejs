@@ -1,91 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/css/main.css">
-        <title>CodeUp</title>
-    </head>
-
-    <body style="background-color: #C4F3CA;">
-
-        <!-- хедер-->
-        <%- include("partials/header") %>
-
-        <!--основний опис курсу-->
-        <%- include("partials/course_descriptions", {title: 'What is inside your computer?' , 
-        description: 'This course takes you behind the screen to uncover how computers actually work. You will explore hardware components, binary logic, and how software interacts with circuits — everything that makes your machine come alive.',
-        det_1: 'Visual explanations of CPU, RAM, and storage.', det_2: 'Build a working mental model of a computer.', 
-        det_3: 'Learn how data flows inside your system.', det_4: 'Includes small experiments and simulations.', }) %>
-
-        <!--основні деталі курсу (ціна, рівень тощо)-->
-        <%- include("partials/lab1course_details", {level: 'hard' , price: '200' , week_num: '8' , age: '18' ,
-            category: 'Machine learning' }) %>
-
-        <!--навички, отримані після курсу-->
-        <%- include("partials/skill_after_course", {skill_1: 'Main components of a computer and their roles',
-            skill_2: 'How data is represented in binary',
-            skill_3: 'Logic gates and simple circuit ideas',
-            skill_4: 'Operating system basics',
-            skill_5: 'How programming languages communicate with hardware',
-            skill_6: 'Troubleshooting basics and system care'} ) %>
-
-        <a href="/enrollment" class="enroll_button">Get started</a>
-
-        <!--інформація про вчителя курсу-->
-        <%- include("partials/teacher_info", {name: 'Maria Novak' , profession : 'Computer Engineer & Educator' , 
-            photo_of_teacher: './pictures/alex_teacher.png' , description: 'Maria has a background in embedded systems and microprocessors. She helps learners bridge the gap between physical hardware and digital logic. Her principle: "If you understand the inside, you control the outside."' }) %>
-
-        <!--контент курсу-->
-        <h3>Course contebt</h3>
-        <div>
-            <details class="module">
-                <summary class="module-title">Meet your computer: hardware overview</summary>
-                <ul class="custom-list">
-                    <li>Under development</li>
-                </ul>
-            </details>
-
-            <details class="module">
-                <summary class="module-title">Binary and data representation</summary>
-                <ul class="custom-list">
-                    <li>Under development</li>
-                </ul>
-            </details>
-
-            <details class="module">
-                <summary class="module-title">Logic and processing</summary>
-                <ul class="custom-list">
-                    <li>Under development</li>
-                </ul>
-            </details>
-
-            <details class="module">
-                <summary class="module-title">Memory, storage, and I/O</summary>
-                <ul class="custom-list">
-                    <li>Under development</li>
-                </ul>
-            </details>
-
-            <details class="module">
-                <summary class="module-title">Operating system fundamentals</summary>
-                <ul class="custom-list">
-                    <li>Under development</li>
-                </ul>
-            </details>
-
-            <details class="module">
-                <summary class="module-title">Hardware and software in action</summary>
-                <ul class="custom-list">
-                    <li>Under development</li>
-                </ul>
-            </details>
-
-            </details>
-        </div>
-
-        <!--футер-->
-        <%- include("partials/footer") %>
-    </body>
-
-</html>
+<%- include("template_course.ejs", {title: 'What is inside your computer?' , 
+description: 'This course takes you behind the screen to uncover how computers actually work. You will explore hardware components, binary logic, and how software interacts with circuits — everything that makes your machine come alive.',
+det_1: 'Visual explanations of CPU, RAM, and storage.', 
+det_2: 'Build a working mental model of a computer.', 
+det_3: 'Learn how data flows inside your system.', 
+det_4: 'Includes small experiments and simulations.',
+level: 'hard' , 
+price: '200' , 
+week_num: '8' , 
+age: '18' ,
+category: 'Machine learning',
+skill_1: 'Main components of a computer and their roles',
+skill_2: 'How data is represented in binary',
+skill_3: 'Logic gates and simple circuit ideas',
+skill_4: 'Operating system basics',
+skill_5: 'How programming languages communicate with hardware',
+skill_6: 'Troubleshooting basics and system care',
+name: 'Maria Novak' , 
+profession : 'Computer Engineer & Educator' , 
+photo_of_teacher: './pictures/alex_teacher.png' , 
+description: 'Maria has a background in embedded systems and microprocessors. She helps learners bridge the gap between physical hardware and digital logic. Her principle: "If you understand the inside, you control the outside."' }) %>

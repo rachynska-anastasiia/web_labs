@@ -1,90 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/css/main.css">
-        <title>CodeUp</title>
-    </head>
+<%- include("template_course.ejs", {title: 'Pixel Alchemist' , 
+description: 'Learn the magic of creating digital art pixel by pixel. This course teaches the fundamentals of pixel art for games, web, and creative projects — from color theory to animation.',
+det_1: 'Step-by-step guidance for absolute beginners.', 
+det_2: 'Practical drawing exercises.', 
+det_3: 'Learn tools like Aseprite or Piskel.', 
+det_4: 'Perfect for artists and game enthusiasts.',
+level: 'easy' , 
+price: '200' , 
+week_num: '4' , 
+age: '14' ,
+category: 'HTML &amp; CSS', skill_1: 'What pixel art is and how it’s used',
+skill_2: 'Canvas setup and pixel tools',
+skill_3: 'Drawing shapes, shading, and lighting',
+skill_4: 'Working with palettes and contrast',
+skill_5: 'Creating simple animations',
+skill_6: 'Exporting assets for games or web use',
+name: 'Nora Kim' , profession : 'Pixel Artist & Game Designer' , 
+photo_of_teacher: './pictures/alex_teacher.png' , description: 'Nora has been creating pixel-based visuals for indie games and retro projects for years. She focuses on creativity through simplicity. Her quote: "Every pixel counts — make it matter.'
 
-    <body style="background-color: #C4F3CA;">
-
-        <!-- хедер-->
-        <%- include("partials/header") %>
-
-        <!--основний опис курсу-->
-        <%- include("partials/course_descriptions", {title: 'Pixel Alchemist' , 
-        description: 'Learn the magic of creating digital art pixel by pixel. This course teaches the fundamentals of pixel art for games, web, and creative projects — from color theory to animation.',
-        det_1: 'Step-by-step guidance for absolute beginners.', det_2: 'Practical drawing exercises.', 
-        det_3: 'Learn tools like Aseprite or Piskel.', det_4: 'Perfect for artists and game enthusiasts.', }) %>
-
-        <!--основні деталі курсу (ціна, рівень тощо)-->
-        <%- include("partials/lab1course_details", {level: 'easy' , price: '200' , week_num: '4' , age: '14' ,
-            category: 'HTML &amp; CSS' }) %>
-
-        <!--навички, отримані після курсу-->
-        <%- include("partials/skill_after_course", {skill_1: 'What pixel art is and how it’s used',
-            skill_2: 'Canvas setup and pixel tools',
-            skill_3: 'Drawing shapes, shading, and lighting',
-            skill_4: 'Working with palettes and contrast',
-            skill_5: 'Creating simple animations',
-            skill_6: 'Exporting assets for games or web use'} ) %>
-
-        <a href="/enrollment" class="enroll_button">Get started</a>
-        
-        <!--інформація про вчителя курсу-->
-        <%- include("partials/teacher_info", {name: 'Nora Kim' , profession : 'Pixel Artist & Game Designer' , 
-            photo_of_teacher: './pictures/alex_teacher.png' , description: 'Nora has been creating pixel-based visuals for indie games and retro projects for years. She focuses on creativity through simplicity. Her quote: "Every pixel counts — make it matter.' }) %>
-
-
-        <!--контент курсу-->
-        <h3>Course contebt</h3>
-        <div>
-            <details class="module">
-                <summary class="module-title">Introduction to pixel art</summary>
-                <ul class="custom-list">
-                    <li>Under development</li>
-                </ul>
-            </details>
-
-            <details class="module">
-                <summary class="module-title">Tools and workspace setup</summary>
-                <ul class="custom-list">
-                    <li>Under development</li>
-                </ul>
-            </details>
-
-            <details class="module">
-                <summary class="module-title">Drawing and shading basics</summary>
-                <ul class="custom-list">
-                    <li>Under development</li>
-                </ul>
-            </details>
-
-            <details class="module">
-                <summary class="module-title">Color and palette creation</summary>
-                <ul class="custom-list">
-                    <li>Under development</li>
-                </ul>
-            </details>
-
-            <details class="module">
-                <summary class="module-title">Pixel animation</summary>
-                <ul class="custom-list">
-                    <li>Under development</li>
-                </ul>
-            </details>
-
-            <details class="module">
-                <summary class="module-title">Final project: your own sprite sheet</summary>
-                <ul class="custom-list">
-                    <li>Under development</li>
-                </ul>
-            </details>
-        </div>
-
-        <!--футер-->
-        <%- include("partials/footer") %>
-    </body>
-
-</html>
+}) %>

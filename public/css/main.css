@@ -1,5 +1,16 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+/*@mixin grid($cols: 3, $gap: 20px) {
+    display: grid;
+    grid-template-columns: repeat($cols, 1fr);
+    gap: $gap;
+    align-items: stretch;
+  }*/
+/*.courses-plates {
+    @include grid(3, 40px);
+    width: 100%;
+}*/
 .row {
   display: flex;
   align-items: flex-start;
@@ -100,6 +111,71 @@
   font-style: normal;
 }
 
+.c {
+  text-align: center;
+  align-items: center;
+}
+
+.j {
+  text-align: justify;
+}
+
+.pixel-text-small {
+  font-family: "Press Start 2P", cursive;
+  font-size: 14px;
+  color: #003300;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.main-text {
+  font-family: "Quantico", sans-serif !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  font-size: 20px !important;
+  color: #003300 !important;
+}
+
+.main-text-white {
+  font-family: "Quantico", sans-serif !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  font-size: 20px !important;
+  color: #FFFFFF !important;
+}
+
+.pixel-text-middle {
+  font-family: "Press Start 2P", cursive;
+  font-size: 20px;
+  color: #003300;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.pixel-text-middle-white {
+  font-family: "Press Start 2P", cursive;
+  font-size: 20px;
+  color: #FFFFFF;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.pixel-text-small-white {
+  font-family: "Press Start 2P", cursive;
+  font-size: 14px;
+  color: #FFFFFF;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.pixel-text-big {
+  font-family: "Press Start 2P", cursive;
+  font-size: 32px;
+  color: #003300;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .slogan {
   padding-left: 20%;
   font-family: "Press Start 2P", cursive;
@@ -107,8 +183,43 @@
   color: #003300;
   font-weight: 400;
   font-style: normal;
+  line-height: 1.2;
+  display: inline-block;
 }
 
+.slogan span {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+}
+
+.slogan span:nth-child(1) {
+  animation: typing 1.2s steps(5, end) 0s forwards;
+}
+
+.slogan span:nth-child(2) {
+  animation: typing 1.2s steps(7, end) 1s forwards;
+}
+
+.slogan span:nth-child(3) {
+  animation: typing 1.2s steps(3, end) 2s forwards;
+}
+
+.slogan span:nth-child(4) {
+  animation: typing 1.2s steps(6, end) 3s forwards;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
 section.row {
   display: flex;
   justify-content: space-between;
@@ -177,21 +288,13 @@ section.row picture {
   padding-block: 30px;
 }
 
-.pixel-text-big {
-  font-family: "Press Start 2P", cursive;
-  font-size: 32px;
-  color: #003300;
-  font-weight: 400;
-  font-style: normal;
-}
-
 .main-advantages {
   display: flex;
-  font-family: "Quantico", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 32px;
-  color: #003300;
+  font-family: "Quantico", sans-serif !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  font-size: 32px !important;
+  color: #003300 !important;
 }
 
 ul.custom-list li {
@@ -199,14 +302,6 @@ ul.custom-list li {
   padding-left: 30px;
   background: url("../pictures/choose circle.png") no-repeat left center;
   background-size: 20px;
-}
-
-.pixel-text-middle {
-  font-family: "Press Start 2P", cursive;
-  font-size: 20px;
-  color: #003300;
-  font-weight: 400;
-  font-style: normal;
 }
 
 .left-right-bbutton {
@@ -231,30 +326,14 @@ ul.custom-list li {
   height: 75px;
 }
 
-.pixel-text-small {
-  font-family: "Press Start 2P", cursive;
-  font-size: 14px;
-  color: #003300;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.main-text {
-  font-family: "Quantico", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 20px;
-  color: #003300;
-}
-
 .margin_left {
   margin-left: 50px;
   margin-bottom: 50px;
 }
 
 .course_enroll {
-  background-color: #4F8B4F;
-  border: 4px solid #1C401C;
+  background-color: #539844;
+  border: 4px solid #003300;
   padding: 30px;
   border-radius: 6px;
   margin-top: 100px;
@@ -267,7 +346,7 @@ ul.custom-list li {
 .enroll-btn {
   width: 300px;
   padding: 14px 0;
-  background: #C4F3CA;
+  background: #539844;
   border: 4px solid #003300;
   border-radius: 6px;
   text-align: center;
@@ -329,6 +408,27 @@ body {
   padding: 0;
 }
 
+@media print {
+  body {
+    background: #FFFFFF;
+  }
+  h1, h2, h3, p {
+    font-family: "Quantico", sans-serif !important;
+    font-weight: 400 !important;
+    font-style: normal !important;
+    font-size: 20px !important;
+    color: black !important;
+  }
+  img {
+    display: none;
+  }
+  button img {
+    display: inline-block;
+  }
+  .not-print {
+    display: none;
+  }
+}
 .call_to_action {
   padding-top: 50px;
   text-align: center;
@@ -352,6 +452,9 @@ body {
   border-radius: 6px;
   text-align: center;
   cursor: pointer;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .big-course-block a {
   text-decoration: none;
@@ -362,12 +465,104 @@ body {
   font-style: normal;
 }
 
+.courses-plates {
+  display: flex;
+}
+
 .course-page-discriptions {
   text-align: left;
   padding-left: 10%;
 }
 
-pixel-text-middle-white {
+.start {
+  padding-top: 50px;
+}
+
+.course-details {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px 20px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 32px;
+}
+@media (max-width: 900px) {
+  .course-details {
+    grid-template-columns: 1fr;
+  }
+}
+
+.col {
+  display: flex;
+  align-items: center;
+}
+
+.enroll_button a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+.enroll_button {
+  text-decoration: none;
+  display: block;
+  width: 90%;
+  padding: 25px 0;
+  background: #539844;
+  border: 4px solid #003300;
+  border-radius: 6px;
+  text-align: center;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.course-details-mentor {
+  margin-top: 50px;
+  padding: 15px 15px;
+  background: #539844;
+  border: 4px solid #003300;
+  border-radius: 6px;
+}
+
+.module {
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  display: block;
+  border: 4px solid #003300;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #C4F3CA;
+}
+
+.module:not([open]) .custom-list {
+  display: none;
+}
+
+.module[open] .module-title {
+  border-bottom: 3px solid #0e3209;
+}
+
+.module-title::after {
+  content: "▾";
+  font-size: 45px;
+  color: #fff;
+  transition: transform 0.2s;
+}
+
+.module[open] .module-title::after {
+  transform: rotate(180deg);
+}
+
+.module-title {
+  list-style: none;
+  padding: 25px 20px;
+  background: #539844;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
   font-family: "Press Start 2P", cursive;
   font-size: 20px;
   color: #FFFFFF;
@@ -375,18 +570,8 @@ pixel-text-middle-white {
   font-style: normal;
 }
 
-.pixel-text-small-white {
-  font-family: "Press Start 2P", cursive;
-  font-size: 14px;
-  color: #FFFFFF;
-  font-weight: 400;
-  font-style: normal;
-}
-
 /*
-@use "base/index";
 @use "components/index";
-@use "pages/index";
 @use "themes/index";
 @use "vendors/index";*/
 

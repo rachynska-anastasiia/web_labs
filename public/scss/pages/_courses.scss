@@ -1,5 +1,6 @@
 @use "../abstracts/index" as *;
 @use "../abstracts/mixins" as *;
+@use "../base/text_styles" as *;
 
 .call_to_action{
     padding-top: 50px;
@@ -26,11 +27,20 @@
     text-align: center;
     cursor: pointer;
 
+    height: 100%;
+
+    display: flex; 
+    flex-direction: column;
+
     a{
         text-decoration: none;
         @include header-font(20px, $color-white, 400);
     }
     
+}
+
+.courses-plates {
+    display: flex;
 }
 
 .course-page-discriptions
@@ -39,11 +49,3 @@
     padding-left: 10%
 }
 
-pixel-text-middle-white{
-    @include header-font(20px, $color-white, 400);
-    
-}
-
-.pixel-text-small-white{
-    @include header-font(14px, $color-white, 400);
-}
