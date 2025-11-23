@@ -38,3 +38,7 @@
 .pixel-text-big{
     @include header-font(32px, $color-accent, 400);
 }
+
+.pixel-text-big-white{
+    @include header-font(32px, $color-white, 400);
+}

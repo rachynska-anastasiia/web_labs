@@ -5,7 +5,7 @@
 
 .margin_left{
     margin-left: 50px;
-    margin-bottom: 50px;
+    //margin-bottom: 50px;
 }
 
 .course_enroll {
@@ -22,13 +22,15 @@
 }
 
 .enroll-btn {
-    width: 300px;
-    padding: 14px 0;
+    width: 100%;
+    //padding: 14px 0;
+    margin-bottom: 20px;
     background: $color-secondary;
     border: 4px solid $color-accent;
     border-radius: 6px;
     text-align: center;
-    
+    //justify-content: center;
+    height: 75px;
     margin-top: 20px;
 }
 
@@ -49,8 +51,9 @@
 .row-enrol {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: stretch;
     width: 100%;
+    gap: 10px;
 }
 
 .col {
@@ -60,6 +63,8 @@
 
 .left-col{
     display: block;
+    line-height: 1.75;
+    align-items: center;
 }
 .left-col-gen{
     display: block;
@@ -68,17 +73,22 @@
 .right-col {
     display: block;
     text-align: right;
+    line-height: 1.75;
+    align-items: center;
 }
 
 .right-col-pic { 
-    justify-content: center;
-    align-items: center;
-    height: 300px;   
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 0;
+    align-items: flex-end;
+    //height: 100%;  
+    margin-right: 20px; 
     
-    picture img{
+    /*picture img{
         width: 300px;
         height: auto;
-    }
+    }*/
 }
 
 body {

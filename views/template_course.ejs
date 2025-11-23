@@ -15,8 +15,8 @@
         <!--основний опис курсу-->
     <div class="start course-details j">
         <div class="start course-details-main">
-            <section >
-                <h2 class="pixel-text-middle">&gt;<%= title %></h2>
+            <section>
+                <h2 class="pixel-text-big">&gt;<%= title %></h2>
                     <p class="main-text"><%= description %></p>
                     <ul>
                         <li class="main-text"><%= det_1 %></li>
@@ -28,18 +28,17 @@
     
     
             <!--основні деталі курсу (ціна, рівень тощо)-->
-            <section class="col">
-                <div class="col">
-                    <ul class="custom-list">
+            <section class="dets coln">
+                
+                    <ul class="description-list">
                         <li class="pixel-text-middle">Shedule:<span class="pixel-text-small">flexible</span></li>
                         <li class="pixel-text-middle">Difficulty:<span class="pixel-text-small"><%= level %></span></li>
                         <li class="pixel-text-middle">Total cost:<span class="pixel-text-small">
                                 <%= price %>$
                             </span></li>
                     </ul>
-                </div>
-                <div class="col">
-                    <ul class="custom-list">
+                
+                    <ul class="description-list">
                         <li class="pixel-text-middle">Duration:<span class="pixel-text-small">
                                 <%= week_num %> weeks
                             </span></li>
@@ -50,7 +49,7 @@
                                 <%= category %>
                             </span></li>
                     </ul>
-                </div>
+                
             </section>
     
             <!--навички, отримані після курсу-->
