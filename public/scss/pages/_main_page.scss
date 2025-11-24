@@ -158,7 +158,8 @@
 }
 
 .carousel-row{
-    @include flex(unset, center);
+    display: flex;
+    align-items: center;
     gap: 10px;
     overflow: hidden;
 }

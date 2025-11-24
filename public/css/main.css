@@ -591,10 +591,7 @@ ul.description-list li {
 
 .carousel-row {
   display: flex;
-  justify-content: unset;
   align-items: center;
-  flex-direction: row;
-  flex-wrap: nowrap;
   gap: 10px;
   overflow: hidden;
 }
