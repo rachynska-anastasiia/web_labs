@@ -1,68 +1,17 @@
 @use "../abstracts/index" as *;
-@use "../abstracts/mixins" as *;
-@use "../base/text_styles" as *;
+@use "../components/index" as *;
+@use "../base/index" as *;
 
 .call_to_action{
     padding-top: 50px;
     text-align: center;
 }
 
-.filter-button{
-    background: $color-secondary;
-    border: 4px solid $color-accent;
-    border-radius: 6px;
-    text-align: center;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    padding-left: 20px;
-    align-items: center;
-}
-
-.big-course-block{
-    background: $color-secondary;
-    border: 4px solid $color-accent;
-    border-radius: 6px;
-    text-align: center;
-    cursor: pointer;
-    min-width: 300px;
- 
-
-    //width: 100%;
-
-    height: 100%;
-
-    aspect-ratio: unset;
-
-    display: flex; 
-    flex-direction: column;
-
-    a{
-        text-decoration: none;
-        @include header-font(20px, $color-white, 400);
-    }
-    
-}
-
 .courses-plates {
     align-items: center;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 50px;
     padding: 0 40px 40px 40px;
-}
-
-.course-page-discriptions
-{
-    line-height: 1.5;
-    text-align: left;
-    padding-left: 10%
-}
-
-.level{
-    justify-content: flex-end;
-    align-items: baseline;
-    display: flex;
-    gap: 10px;
-    padding-right: 15px;
+    @include respond-to(mobile) { grid-template-columns: 1fr; gap: 10px; }
+    @include respond-to(tablet) { grid-template-columns: 1fr; gap: 15px; }
+    @include respond-to(desktop) { grid-template-columns: repeat(3, 1fr); gap: 50px; }
 }

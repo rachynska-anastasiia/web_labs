@@ -42,3 +42,11 @@
 .pixel-text-big-white{
     @include header-font(32px, $color-white, 400);
 }
+
+.footer-text-big{
+    @include header-font(20px, $color-white, 400);
+}
+
+.footer-text-small{
+    @include header-font(12px, $color-white, 400);
+}

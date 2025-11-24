@@ -1,0 +1,9 @@
+@use "../abstracts/index" as *;
+
+.footer {
+    @include flex(space-between, center, unset, wrap);
+    width: 100%;
+    background-color: $color-accent;
+    margin: 0;
+    padding: 0;
+}

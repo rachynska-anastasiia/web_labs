@@ -1,6 +1,15 @@
+@use "../abstracts/breakpoints" as *;
+@use "../abstracts/colors" as *;
+@use "sass:math";
+
+@function rem($px, $base: 16px) {
+  @return math.div($px, $base) * 1rem;
+}
+
+
 @mixin header-font($size: 24px, $color: $color-accent, $weight: 400) {
     font-family: 'Press Start 2P', cursive;
-    font-size: $size;
+    font-size: rem($size);
     color: $color;
     font-weight: $weight;
     font-style: normal;
@@ -10,18 +19,38 @@
     font-family: "Quantico", sans-serif !important;
     font-weight: 400 !important;
     font-style: normal !important;
-    font-size: $size !important;
+    font-size: rem($size) !important;
     color: $color !important;
 }
 
-/*@mixin grid($cols: 3, $gap: 20px) {
-    display: grid;
-    grid-template-columns: repeat($cols, 1fr);
-    gap: $gap;
-    align-items: stretch;
-  }*/
+@mixin flex( $justify: flex-start, $align: stretch, $direction: row, $wrap: nowrap)
+{
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+}
 
-/*.courses-plates {
-    @include grid(3, 40px);
-    width: 100%;
-}*/
+@mixin button_style()
+{
+    background: $color-secondary;
+    border: 4px solid $color-accent;
+    border-radius: 10px;
+}
+
+@mixin respond-to($breakpoint)
+{
+    @if $breakpoint == mobile 
+    {
+        @media (max-width: $bp-mobile) { @content; }
+    } 
+    @else if $breakpoint == tablet 
+    {
+        @media (min-width: ($bp-mobile + 1)) and (max-width: $bp-tablet) { @content; }
+    } 
+    @else if $breakpoint == desktop 
+    {
+        @media (min-width: ($bp-tablet + 1)) { @content; }
+    }
+}

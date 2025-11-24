@@ -1,21 +1,24 @@
 <!--для сторінки з переліком усіх курсів-->
 <div itemscope itemtype="https://schema.org/Course" class="big-course-block">
     <a itemprop="url" href="<%= link %>">
-        <div class="course-name-logo">
-            <h3 itemprop="name" class="pixel-text-middle-white">
-                <%= title %>
-            </h3>
-            <img itemprop="image" src="<%= logo_path %>" alt="Course logo">
+        <div class="big-course-block__content">
+            <div class="course-name-logo">
+                <h3 itemprop="name" class="pixel-text-middle-white">
+                    <%= title %>
+                </h3>
+                <img itemprop="image" src="<%= logo_path %>" alt="Course logo">
+            </div>
+            <div class="big-course-block__discriptions">
+                <p itemprop="description" class="pixel-text-small-white">&gt;<%= category %><br>&gt;Age: <%= age %>+<br>&gt;<%=
+                                weeks_number %> weeks</p>
+            </div>
+            <div class="big-course-block__level">
+                <p class="pixel-text-small-white">
+                    <%= level %>
+                </p>
+                <img src="<%= level_path %>" alt="level">
+            </div>
         </div>
-        <div class="course-page-discriptions">
-            <p itemprop="description" class="pixel-text-small-white">&gt;<%= category %><br>&gt;Age: <%= age %>+<br>&gt;<%=
-                            weeks_number %> weeks</p>
-        </div>
-        <div class="level">
-            <p class="pixel-text-small-white">
-                <%= level %>
-            </p>
-            <img src="<%= level_path %>" alt="level">
-        </div>
+        
     </a>
 </div>

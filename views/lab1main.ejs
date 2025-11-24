@@ -12,12 +12,12 @@
         <%- include("partials/header") %>
 
         <!--банер-->
-        <section class="row">
-            <div class="col">
-                <p class="slogan"> 
+        <section class="banner">
+            <div class="banner__text">
+                <p class="banner__slogan"> 
                     <span> &gt;Code </span><span>smarter</span><span>not</span><span>harder</span></p>
             </div>
-            <div class="col">
+            <div class="banner__image">
                 <picture>
                     <source media="(min-width: 1024px)" srcset="/pictures/super_proffesionals.png" type="image/png">
                     <source media="(min-width: 640px)" srcset="/pictures/small_professionals.png" type="image/png">
@@ -27,10 +27,10 @@
         </section>
         
         <!--school statistics-->
-        <section class="carousel show-statistics p-20">
+        <section class="carousel-row statistics">
 
-            <div class="statistics-element">
-                <div class="statistics-top">
+            <div class="statistics__element">
+                <div class="statistics__top">
                     <picture>
                         <source media="(min-width: 1024px)" srcset="/pictures/book.png" type="image/png">
                         <source media="(min-width: 640px)" srcset="/pictures/small_book.png" type="image/png">
@@ -38,13 +38,13 @@
                     </picture>
                     <p class="pixel-text-big">50</p>
                 </div>
-                <div class="statistics-bottom">
+                <div class="statistics__bottom">
                     <p class="pixel-text-big">Courses</p>
                 </div>
             </div>
 
-            <div class="statistics-element">
-                <div class="statistics-top">
+            <div class="statistics__element">
+                <div class="statistics__top">
                     <picture>
                         <source media="(min-width: 1024px)" srcset="/pictures/teacher.png" type="image/png">
                         <source media="(min-width: 640px)" srcset="/pictures/small_teacher.png" type="image/png">
@@ -52,14 +52,14 @@
                     </picture>
                     <p class="pixel-text-big">20</p>
                 </div>
-                <div class="statistics-bottom">
+                <div class="statistics__bottom">
                     <p class="pixel-text-big">Teachers</p>
                 </div>
                 
             </div>
 
-            <div class="statistics-element">
-                <div class="statistics-top">
+            <div class="statistics__element">
+                <div class="statistics__top">
                     <picture>
                         <source media="(min-width: 1024px)" srcset="/pictures/students.png" type="image/png">
                         <source media="(min-width: 640px)" srcset="/pictures/small_students.png" type="image/png">
@@ -67,14 +67,14 @@
                     </picture>
                     <p class="pixel-text-big">2K</p>
                 </div>
-                <div class="statistics-bottom">
+                <div class="statistics__bottom">
                     <p class="pixel-text-big">Students</p>
                 </div>
                 
             </div>
 
-            <div class="statistics-element">
-                <div class="statistics-top">
+            <div class="statistics__element">
+                <div class="statistics__top">
                     <p class="pixel-text-big">5</p>
                     <picture>
                         <source media="(min-width: 1024px)" srcset="/pictures/star.png" type="image/png">
@@ -82,7 +82,7 @@
                         <img src="/pictures/small_star.png" width="50" height="50" alt="stars">
                     </picture>
                 </div>
-                <div class="statistics-bottom">
+                <div class="statistics__bottom">
                     <p class="pixel-text-big">Rating</p>
                 </div>
                 
@@ -100,7 +100,7 @@
         </section>
 
         <!--categories-->
-        <div class="col plr-45 jc-sb">
+        <div class="name-det">
             <h2 class="pixel-text-big">Our top сourses</h2>
             <a href="/courses" class="pixel-text-middle">Click to see more</a>
         </div>
@@ -112,18 +112,17 @@
                 <img src="./pictures/left.png" alt="More">
             </button>
             <div class="carousel">
-    
                     <div>
                         <a class="carousel-category-item">
                             <img src="./pictures/GameDevIcon.png" alt="GameDev Icon">
-                            <p class="pixel-text-middle">GameDev</p>
+                            <p class="pixel-text-middle-white">GameDev</p>
                         </a>
                     </div>
                     
                     <div>
                         <a class="carousel-category-item">
                             <img src="./pictures/MLIcon.png" alt="Machine Learning Icon">
-                            <p class="pixel-text-middle">Machine Learning</p>
+                            <p class="pixel-text-middle-white">Machine Learning</p>
                         </a>
                     </div>
     
@@ -131,14 +130,14 @@
                     <div>
                         <a class="carousel-category-item">
                             <img src="./pictures/tag.png" alt="HTML & CSS Icon">
-                            <p class="pixel-text-middle">HTML & CSS</p>
+                            <p class="pixel-text-middle-white">HTML & CSS</p>
                         </a>
                     </div>
     
                     <div>
                         <a class="carousel-category-item">
                             <img src="./pictures/ComputerScienseIcon.png" alt="GameDevIcon">
-                            <p class="pixel-text-middle">Computer Sciense</p>
+                            <p class="pixel-text-middle-white">Computer Sciense</p>
                         </a>
                     </div>
                     
@@ -150,7 +149,7 @@
         </div>
         
 
-        <div class="col plr-45 jc-sb">
+        <div class="name-det">
             <h2 class="pixel-text-big">Our top сourses</h2>
             <a href="/courses" class="pixel-text-middle">Click to see more</a>
         </div>
@@ -163,47 +162,47 @@
             <section class="carousel">
     
                     <a href="/unity_what" class="carousel-course-item">
-                        <div class="course-top">
-                            <p class="pixel-text-middle">Unity what?</p>
-                            <p class="pixel-text-small">>6 weeks</p>
+                        <div class="carousel-course-item__top">
+                            <p class="pixel-text-middle-white">Unity what?</p>
+                            <p class="pixel-text-small-white">>6 weeks</p>
                         </div>
-                        <div class="course-bottom">
-                            <p class="pixel-text-small">easy</p>
+                        <div class="carousel-course-item__bottom">
+                            <p class="pixel-text-small-white">easy</p>
                             <img src="./pictures/easyLevel.png" alt="level">
                         </div>
                         
                     </a>
     
                     <a href="/computer_vision" class="carousel-course-item">
-                        <div class="course-top">
-                            <p class="pixel-text-middle">Computer Vision</p>
-                            <p class="pixel-text-small">>4 weeks</p>
+                        <div class="carousel-course-item__top">
+                            <p class="pixel-text-middle-white">Computer Vision</p>
+                            <p class="pixel-text-small-white">>4 weeks</p>
                         </div>
-                        <div class="course-bottom">
-                            <p class="pixel-text-small">hard</p>
+                        <div class="carousel-course-item__bottom">
+                            <p class="pixel-text-small-white">hard</p>
                             <img src="./pictures/hardLevel.png" alt="level">
                         </div>
                         
                     </button>
     
                     <a href="/html_css" class="carousel-course-item">
-                        <div class="course-top">
-                            <p class="pixel-text-middle">HTML & CSS for noobs</p>
-                            <p class="pixel-text-small">>4 weeks</p>
+                        <div class="carousel-course-item__top">
+                            <p class="pixel-text-middle-white">HTML & CSS for noobs</p>
+                            <p class="pixel-text-small-white">>4 weeks</p>
                         </div>
-                        <div class="course-bottom">
-                            <p class="pixel-text-small">easy</p>
+                        <div class="carousel-course-item__bottom">
+                            <p class="pixel-text-small-white">easy</p>
                             <img src="./pictures/easyLevel.png" alt="level">
                         </div> 
                     </a>
     
                     <a href="/computer_inside" class="carousel-course-item">
-                        <div class="course-top">
-                            <p class="pixel-text-middle">What's inside your computer?</p>
-                            <p class="pixel-text-small">>4 weeks</p>
+                        <div class="carousel-course-item__top">
+                            <p class="pixel-text-middle-white">What's inside your computer?</p>
+                            <p class="pixel-text-small-white">>4 weeks</p>
                         </div>
-                        <div class="course-bottom">
-                            <p class="pixel-text-small">medium</p>
+                        <div class="carousel-course-item__bottom">
+                            <p class="pixel-text-small-white">medium</p>
                             <img src="./pictures/mediumLevel.png" alt="level">
                         </div>
                         
@@ -219,25 +218,25 @@
          
         
         <!--feedbacks-->
-        <section class="feedbacks-section">
+        <section class="feedback">
             <h2 class="pixel-text-big-white plr-45">Feedbacks</h2>
-            <div class="feedback-grid">
+            <div class="feedback__grid">
                 <!-- 
                 <button class="left-right-bbutton" aria-label="Move to left">
                     <img src="./pictures/left.png" alt="More">
                 </button>
                 -->
     
-                <div class="feedback-card">
-                    <div class="feedback-header">
+                <div class="feedback__card">
+                    <div class="feedback__header">
                         <picture>
                             <source media="(min-width: 1024px)" srcset="/pictures/personIcon.png" type="image/png">
                             <source media="(min-width: 640px)" srcset="/pictures/small_person.png" type="image/png">
                             <img src="/pictures/small_person.png" width="100" height="100" alt="avatar">
                         </picture>
-                        <div class="feedback-info">
+                        <div class="feedback__info">
                             <p class="pixel-text-middle">CodeWizard42</p>
-                            <div class="stars">
+                            <div class="feedback__stars">
                                 <img src="./pictures/small_star.png" alt="star">
                                 <img src="./pictures/small_star.png" alt="star">
                                 <img src="./pictures/small_star.png" alt="star">
@@ -249,16 +248,16 @@
                     <p class="main-text plr-20">I've tried a lot of online IT courses, but this site is a game-changer. The lessons are short, clear, and packed with real-life examples. I landed my first junior developer job thanks to their Python track. Highly recommend!</p>
                 </div>
 
-                <div class="feedback-card">
-                    <div class="feedback-header">
+                <div class="feedback__card">
+                    <div class="feedback__header">
                         <picture>
                             <source media="(min-width: 1024px)" srcset="/pictures/personIcon.png" type="image/png">
                             <source media="(min-width: 640px)" srcset="/pictures/small_person.png" type="image/png">
                             <img src="/pictures/small_person.png" width="100" height="100" alt="avatar">
                         </picture>
-                        <div class="feedback-info">
+                        <div class="feedback__info">
                             <p class="pixel-text-middle">DebuggingDuck</p>
-                            <div class="stars">
+                            <div class="feedback__stars">
                                 <img src="/pictures/small_star.png" alt="star">
                                 <img src="/pictures/small_star.png" alt="star">
                                 <img src="/pictures/small_star.png" alt="star">

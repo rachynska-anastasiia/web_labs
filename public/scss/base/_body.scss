@@ -1,0 +1,21 @@
+@use "../abstracts/index" as *;
+
+body {
+    padding-top: 50px;
+    margin: 0;
+    padding: 0;
+}
+
+.mobile {
+    display: none;
+    @include respond-to(mobile) {
+        display: block;
+    }
+}
+
+.desktop {
+    display: none;
+    @include respond-to(desktop) {
+        display: block;
+    }
+}

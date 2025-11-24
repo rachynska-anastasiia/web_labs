@@ -1,0 +1,73 @@
+@use "../abstracts/index" as *;
+
+
+.left-right-bbutton{
+    width: 45px;
+    height: 45px;
+    flex-shrink: 0;
+    align-items: center;
+    background: none;
+    border: none;
+}
+
+.move-page-button a{
+
+    @include flex(unset, baseline);
+    gap: 10px;
+    text-decoration: none;
+    color: $color-white;
+    @include header-font(16px, $color-white, 400);
+
+    img{
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.enroll-btn {
+    width: 100%;
+    margin-bottom: 20px;
+    @include button_style();
+    text-align: center;
+    height: 75px;
+    margin-top: 20px;
+}
+
+.circle-button {
+    width: 24px;
+    height: 24px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+
+    img {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.get_started_button{
+    a{
+        text-decoration: none;
+        color: $color-white;
+    }
+    text-decoration: none;
+    display: block;
+    width: 90%;
+    padding: 25px 0;
+    @include button_style();
+    text-align: center;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.filter-button{
+    @include button_style();
+    text-align: center;
+    cursor: pointer;
+
+    @include flex(space-between, center);
+    padding-left: 10px;
+}

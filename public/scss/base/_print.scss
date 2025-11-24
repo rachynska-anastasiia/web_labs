@@ -1,0 +1,23 @@
+@use "../abstracts/index" as *;
+
+@media print{
+    body{
+        background: $color-white;
+    }
+
+    h1, h2, h3, p{
+       @include main-text-font(20px, black, 400);
+    }
+
+    img{
+        display: none;
+    }
+
+    button img {
+        display: inline-block;
+    }
+
+    .not-print{
+        display:none;
+    }
+}

@@ -1,73 +1,34 @@
 @use "../abstracts/index" as *;
-@use "../abstracts/mixins" as *;
-@use "../base/text_styles" as *;
-
-
-.start{
-    padding-top: 50px;
-}
+@use "../components/index" as *;
+@use "../base/index" as *;
 
 .course-details{
-    //max-width: 1300px;
     width: 90%;
     margin: 0 auto;
-    padding: 20px 20px 0px 0px;
+    padding: 60px 20px 0px 0px;
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 32px;
 
-    @media (max-width: 900px){
-        grid-template-columns: 1fr;
+    @include respond-to(tablet){grid-template-columns: 1fr;}
+    @include respond-to(mobile){grid-template-columns: 1fr;}
+
+    &__dets{
+        line-height: 1.5;
     }
-}
-ul.description-list {
-    margin: 0;
-    padding: 0;
-}
 
-ul.description-list li{
-    list-style: none;
-    padding-left: 30px;
-    background: url("../pictures/choose circle.png") no-repeat left center;
-    background-size: 20px;
-}
-
-.dets{
-    line-height: 1.5;
-}
-
-.coln {
-    display: flex;
-    //justify-content: f
-    justify-content: flex-start;
-    gap: 20px; 
-}
-
-.enroll_button{
-    a{
-        text-decoration: none;
-        color: $color-white;
+    &__mentor{
+        margin-top: 50px;
+        padding: 15px 15px;
+        @include button_style();
     }
-    text-decoration: none;
-    display: block;
-    width: 90%;
-    //align-self: center;
-    padding: 25px 0;
-    background: $color-secondary;
-    border: 4px solid $color-accent;
-    border-radius: 6px;
-    text-align: center;
-    margin: auto;
-    margin-top: 40px;
-    margin-bottom: 40px;
-}
 
-.course-details-mentor{
-    margin-top: 50px;
-    padding: 15px 15px;
-    background: $color-secondary;
-    border: 4px solid $color-accent;
-    border-radius: 6px;
+    @include respond-to(desktop){
+        &__coln {
+            @include flex(flex-start);
+            gap: 20px; 
+        }
+    };
 }
 
 .module{
@@ -80,33 +41,35 @@ ul.description-list li{
     border-radius: 12px;
     overflow: hidden;
     background: $color-primary;
-    //transition: background 0.2s;
+
+    &__title{
+        list-style: none;
+        padding: 25px 20px;
+        background: $color-secondary;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        user-select: none;
+        @include header-font(20px, $color-white, 400);
+
+        &::after {
+            content: url("../pictures/down.png");
+            font-size: 45px;
+            color: $color-white;
+            transition: transform 0.2s;
+        }
+    }
+
+    &[open] &__title {
+        border-bottom: 3px solid $color-accent;
+
+        &__::after {
+            transform: rotate(180deg);
+        }
+    }
 }
 
 
-.module[open] .module-title {
-    border-bottom: 3px solid $color-accent;
-}
 
-.module-title::after {
-    content: url("../pictures/down.png");
-    font-size: 45px;
-    color: $color-white;
-    transition: transform 0.2s;
-}
 
-.module[open] .module-title::after {
-    transform: rotate(180deg);
-}
-
-.module-title{
-    list-style: none;
-    padding: 25px 20px;
-    background: $color-secondary;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    user-select: none;
-    @include header-font(20px, $color-white, 400);
-}
