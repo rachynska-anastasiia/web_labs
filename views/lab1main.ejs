@@ -6,6 +6,8 @@
         <link rel="stylesheet" href="/css/main.css">
         <title>CodeUp</title>
     </head>
+    
+    <script src="/js/main.js" type="module"></script>
     <body style="background-color: #C4F3CA;">
 
         <!-- хедер-->
@@ -108,42 +110,12 @@
 
         <div class="carousel-row p-10">
 
-            <button class="left-right-bbutton" aria-label="Move to left">
+            <button class="left-right-bbutton categories-left" aria-label="Move to left">
                 <img src="./pictures/left.png" alt="More">
             </button>
-            <div class="carousel">
-                    <div>
-                        <a class="carousel-category-item">
-                            <img src="./pictures/GameDevIcon.png" alt="GameDev Icon">
-                            <p class="pixel-text-middle-white">GameDev</p>
-                        </a>
-                    </div>
-                    
-                    <div>
-                        <a class="carousel-category-item">
-                            <img src="./pictures/MLIcon.png" alt="Machine Learning Icon">
-                            <p class="pixel-text-middle-white">Machine Learning</p>
-                        </a>
-                    </div>
-    
-    
-                    <div>
-                        <a class="carousel-category-item">
-                            <img src="./pictures/tag.png" alt="HTML & CSS Icon">
-                            <p class="pixel-text-middle-white">HTML & CSS</p>
-                        </a>
-                    </div>
-    
-                    <div>
-                        <a class="carousel-category-item">
-                            <img src="./pictures/ComputerScienseIcon.png" alt="GameDevIcon">
-                            <p class="pixel-text-middle-white">Computer Sciense</p>
-                        </a>
-                    </div>
-                    
-                </div>
+            <div class="carousel carousel-categories"></div>
 
-            <button class="left-right-bbutton" aria-label="Move to right">
+            <button class="left-right-bbutton categories-right" aria-label="Move to right">
                 <img src="./pictures/right.png" alt="More">
             </button>
         </div>
@@ -155,11 +127,11 @@
         </div>
         
         <div class="carousel-row p-10">
-            <button class="left-right-bbutton" aria-label="Move to left">
+            <button class="left-right-bbutton courses-left" aria-label="Move to left">
                 <img src="./pictures/left.png" alt="More">
             </button>
     
-            <section class="carousel">
+            <section class="carousel carousel-courses">
     
                     <a href="/unity_what" class="carousel-course-item">
                         <div class="carousel-course-item__top">
@@ -183,7 +155,7 @@
                             <img src="./pictures/hardLevel.png" alt="level">
                         </div>
                         
-                    </button>
+                    </a>
     
                     <a href="/html_css" class="carousel-course-item">
                         <div class="carousel-course-item__top">
@@ -209,7 +181,7 @@
                     </a>       
     
             </section>
-            <button class="left-right-bbutton" aria-label="Move to right">
+            <button class="left-right-bbutton courses-right" aria-label="Move to right">
                 <img src="./pictures/right.png" alt="More">
             </button> 
         </div>

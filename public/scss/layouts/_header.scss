@@ -41,3 +41,16 @@
     }
 
 }
+
+.search-container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-input{
+    padding: 6px 12px;
+    border: 2px solid $color-white;
+    border-radius: 8px;
+    display: none;
+}

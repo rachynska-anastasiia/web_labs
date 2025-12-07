@@ -11,7 +11,16 @@
     align-items: center;
     display: grid;
     padding: 0 40px 40px 40px;
-    @include respond-to(mobile) { grid-template-columns: 1fr; gap: 10px; }
-    @include respond-to(tablet) { grid-template-columns: 1fr; gap: 15px; }
-    @include respond-to(desktop) { grid-template-columns: repeat(3, 1fr); gap: 50px; }
+    @include respond-to(mobile) { 
+        grid-template-columns: 1fr; 
+        gap: 10px; 
+    }
+    @include respond-to(tablet) { 
+        grid-template-columns: 1fr; 
+        gap: 15px; 
+    }
+    @include respond-to(desktop) { 
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 50px; 
+    }
 }

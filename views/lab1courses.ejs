@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/css/main.css">
     <title>CodeUp</title>
 </head>
-
+<script src="/js/main.js" type="module"></script>
 <body style="background-color: #C4F3CA;">
     <!-- хедер-->
     <%- include("partials/header") %>
@@ -48,34 +48,21 @@
         <!--courses-->
 
             <div class="courses-plates">
-                <%- include('partials/courseBigCard', { link: '/unity_what' , title: 'Unity what?' ,
-                    logo_path: './pictures/unity.png' , category: 'Game Development' , age: 15, weeks_number: 6,
-                    level: 'easy' , level_path: './pictures/easyLevel.png' }) %>
-            
-
-            
-                <%- include('partials/courseBigCard', { link: '/computer_vision' , title: 'Computer Vision' ,
-                    logo_path: './pictures/computer_vision.png' , category: 'Machine Learning' , age: 15, weeks_number:
-                    8, level: 'hard' , level_path: './pictures/hardLevel.png' }) %>
-            
-                <%- include('partials/courseBigCard', { link: '/html_css' , title: 'HTML&CSS for noobs' ,
-                    logo_path: './pictures/html.png' , category: 'HTML&CSS' , age: 15, weeks_number: 4, level: 'easy' ,
-                    level_path: './pictures/easyLevel.png' }) %>
-            
-                <%- include('partials/courseBigCard', { link: '/computer_inside' ,
-                    title: 'Computer inside' , logo_path: './pictures/computer.png' ,
-                    category: 'Computer sciense' , age: 15, weeks_number: 6, level: 'medium' ,
-                    level_path: './pictures/mediumLevel.png' }) %>
-            
-                <%- include('partials/courseBigCard', { link: '/cyber_detective' , title: 'Cyber Detective' ,
-                    logo_path: './pictures/magnifier_glass.png' , category: 'Cybersecurity BasicsS' , age: 15,
-                    weeks_number: 6, level: 'hard' , level_path: './pictures/hardLevel.png' }) %>
-            
-                <%- include('partials/courseBigCard', { link: '/pixel_art' , title: 'Pixel Alchemist' ,
-                    logo_path: './pictures/art.png' , category: 'Digital Art' , age: 14, weeks_number: 4, level: 'easy'
-                    , level_path: './pictures/easyLevel.png' }) %>
-            
-
+                <% courses.forEach(course => { %>
+                    <%- include('partials/courseBigCard', {
+                        link: course.link,
+                        title: course.title,
+                        logo_path: course.logo_path,
+                        category: course.category,
+                        age: course.age,
+                        weeks_number: course.weeks_number,
+                        level: course.level,
+                        level_path: course.level_path
+                    }) %>
+                <% }); %>
+                <% if (courses.length === 0) { %>
+                    <p class="pixel-text-middle">No courses found</p>
+                <% } %>
         </div>
 
         <p class="pixel-text-middle c">More courses will be available soon</p>

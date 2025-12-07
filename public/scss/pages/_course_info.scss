@@ -10,8 +10,12 @@
     grid-template-columns: 2fr 1fr;
     gap: 32px;
 
-    @include respond-to(tablet){grid-template-columns: 1fr;}
-    @include respond-to(mobile){grid-template-columns: 1fr;}
+    @include respond-to(tablet){
+        grid-template-columns: 1fr;
+    }
+    @include respond-to(mobile){
+        grid-template-columns: 1fr;
+    }
 
     &__dets{
         line-height: 1.5;
@@ -55,16 +59,16 @@
 
         &::after {
             content: url("../pictures/down.png");
-            font-size: 45px;
-            color: $color-white;
             transition: transform 0.2s;
         }
     }
 
-    &[open] &__title {
-        border-bottom: 3px solid $color-accent;
+    &[open]{
+        .module__title{
+            border-bottom: 3px solid $color-accent;
+        }
 
-        &__::after {
+        .module__title::after {
             transform: rotate(180deg);
         }
     }

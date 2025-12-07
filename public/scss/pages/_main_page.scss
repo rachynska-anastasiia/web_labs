@@ -8,18 +8,17 @@
     padding-inline: clamp(20px, 8vw, 160px);
 
     &__text{
-        padding-left: 0%;
+        padding-left: 0;
     }
 
     &__slogan{
         @include header-font(64px, $color-accent, 400);;
-            line-height: 1.2;
-            display: inline-block;
+        line-height: 1.2;
+        display: inline-block;
 
         span{
             display: block;
             overflow: hidden;
-            white-space: nowrap;
             width: 0;
         
             animation-iteration-count: infinite;
@@ -68,7 +67,7 @@
         }
 
         &__image {
-            margin: 20px auto 0;
+            margin: 15px auto 0;
         }
 
         &__slogan span {
@@ -127,7 +126,9 @@
             max-width: 100px;
         }
 
-        @include respond-to(mobile) { flex-direction: column; gap: 10px; }
+        @include respond-to(mobile) { 
+            flex-direction: column; gap: 10px; 
+        }
     }
 
     &__top{
@@ -165,37 +166,67 @@
 }
 
 .carousel{
-    display: grid;
-    gap: 20px;
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 0 10px;
+}
 
-    @include respond-to(mobile) {
-         grid-template-columns: 1fr; gap: 10px; 
-    }
-    @include respond-to(tablet) { 
-        grid-template-columns: repeat(2, 1fr); gap: 15px; 
-    }
-    @include respond-to(desktop) { 
-        grid-template-columns: repeat(4, 1fr); 
-    }
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel > div{
+    flex: 0 0 auto;
+    width: 280px;
+    margin-right: 30px;
+}
+
+.carousel > div:last-child {
+    margin-right: 0;
 }
 
 .carousel-category-item{
     @include flex(unset, center);
-    gap: 5px;
+    gap: 10px;
     @include button_style();
-    padding: 20px;
+    padding: 15px;
     text-decoration: none;
-    color: $color-white;
     min-height: 100px;
+    margin-right: 30px;
+    width: 100%;
+    
+    img {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+        flex-shrink: 0;
+    }
+    
+    p {
+        margin: 0;
+        white-space: normal;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-word;
+        flex: 1;
+    }
 }
 
 .carousel-course-item{
     @include flex(space-between, unset, column);
     @include button_style();
-    padding: 20px 20px 0 20px;
+    padding: 25px 25px 0 25px;
     text-decoration: none;
-    color: $color-white;
-    min-height: 100px;
+    min-height: 125px;
+    width: 280px;
+    flex: 0 0 auto;
+    margin-right: 30px;
+
+    &:last-child {
+        margin-right: 0;
+    }
 
     &__top p{
         margin: 0;
@@ -208,7 +239,6 @@
         align-items: baseline;
         gap: 5px;
         margin-top: auto;
-    
     }
 }
 
