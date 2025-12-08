@@ -1,10 +1,9 @@
 import { http } from "../api/http.js";
 import { CarouselController } from "./carousel.js";
 import { SearchController } from "./search.js";     
+import { FilterController } from "./filter.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
-    // Завантажуємо дані для каруселі категорій
-    try {
         const res = await http.get("/api/carousel");
         const items = res.data;
 
@@ -30,11 +29,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             );
             categoriesController.init();
         }
-    } catch (error) {
-        console.error("Error loading carousel data:", error);
-    }
 
-    // Ініціалізуємо карусель курсів
     const coursesContainer = document.querySelector(".carousel-courses");
     const coursesLeftBtn = document.querySelector(".courses-left");
     const coursesRightBtn = document.querySelector(".courses-right");
@@ -55,4 +50,12 @@ document.addEventListener("DOMContentLoaded", async () => {
         const search = new SearchController(input, button);
         search.init()
     }
+
+    const filterEls = document.querySelectorAll("[data-filter]");
+    const courseCards  = document.querySelectorAll("[data-category]");
+    if (filterEls.length && courseCards.length) {
+        const filterController = new FilterController(filterEls, courseCards);
+        filterController.init();
+    }
+
 });

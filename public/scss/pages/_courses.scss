@@ -8,7 +8,7 @@
 }
 
 .courses-plates {
-    align-items: center;
+    align-items: flex-start;
     display: grid;
     padding: 0 40px 40px 40px;
     @include respond-to(mobile) { 
@@ -22,5 +22,19 @@
     @include respond-to(desktop) { 
         grid-template-columns: repeat(3, 1fr); 
         gap: 50px; 
+    }
+}
+
+.filter-option {
+    cursor: pointer;
+    padding: 5px 10px;
+    margin: 2px 0;
+    
+    &.selected {
+        background-color: #539844;
+        //border: 3px solid #003300;
+        border-radius: 6px;
+        margin: 0 30px;
+        font-weight: bold;
     }
 }

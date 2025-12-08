@@ -1,9 +1,7 @@
 export class SearchController {
-   constructor(inputElement, buttonElement, datastore, listElement) {
+   constructor(inputElement, buttonElement) {
     this.inputElement = inputElement;
     this.buttonElement = buttonElement;
-    this.datastore = datastore;
-    this.listElement = listElement;
    }
    init() 
    {
@@ -26,9 +24,7 @@ export class SearchController {
             console.log("keydown: ", e.key);
             if (e.key === "Enter"){
                 const query = this.inputElement.value.trim();
-                if (query.lenght  > 0){
-                    window.location.href = `/courses?search=${encodeURIComponent(query)}`
-                }
+                window.location.href = `/courses?search=${encodeURIComponent(query)}`
             }
         })
     }

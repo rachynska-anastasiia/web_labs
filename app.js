@@ -52,9 +52,7 @@ app.get("/courses", (req, res) => {
         search
     });
 });
-    //res.render("lab1courses")
     
-
 
 app.get("/computer_inside", (req, res) => res.render("computer_inside"));
 app.get("/computer_vision", (req, res) => res.render("computer_vision"));
