@@ -778,6 +778,18 @@ body {
   margin-right: 20px;
 }
 
+.enroll-form {
+  margin-top: 20px;
+  line-height: 1.5;
+}
+
+.enroll-form input {
+  padding: 12px;
+  border-radius: 8px;
+  height: 12px;
+  background-color: #003300;
+}
+
 .call_to_action {
   padding-top: 50px;
   text-align: center;

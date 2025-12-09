@@ -6,6 +6,9 @@
         <link rel="stylesheet" href="/css/main.css">
         <title>CodeUp</title>
     </head>
+
+    <script src="/js/enroll.js" type="module"></script>
+
     <body style="background-color: #C4F3CA;">
         <!-- хедер-->
         <%- include("partials/header") %>
@@ -44,27 +47,39 @@
                 </a>
         
                     <!--отримання інформації про спосіб оплати-->
-                    <p class="pixel-text-small">Choose payment method:</p>
-                    <div class="col">
-                        <button class="circle-button" aria-label="Click to choose">
-                            <img src="./pictures/choose circle.png" alt="Click to choose">
-                        </button>
-                        <p class="pixel-text-small">every week: 50 $</p>
-                    </div>
-        
-                    <div class="col">
-                        <button class="circle-button" aria-label="Click to choose">
-                            <img src="./pictures/choose circle.png" alt="Click to choose">
-                        </button>
-                        <p class="pixel-text-small">full: 200 $</p>
-                    </div>
-        
-                    <button class="enroll-btn">
-                        <p class="pixel-text-middle-white">Enroll</p>
-                    </button>
+                    <form id="enroll-form" class="enroll-form">
+                        <input type="hidden" name="courseTitle" value="HTML & CSS for beginners">
+                        <label class="pixel-text-small enroll-form_label">
+                            Email:
+                            <input 
+                                type="email"
+                                name="email"
+                                required
+                                maxlength="50"
+                                placeholder="you@example.com"
+                                class="enroll-form__input main-text-white"
+                            >
+                        </label>
+                        
+                        <p class="pixel-text-small">Choose payment method:</p>
+                        <div class="col">
+                            <label class="pixel-text-small">
+                                <input type="radio" name="payment" value="weekly" required>
+                                every week: 50 $
+                            </label>
+                        </div>
 
-                    
-                
+                        <div class="col">
+                            <label class="pixel-text-small">
+                                <input type="radio" name="payment" value="full" required>
+                                full: 200 $
+                            </label>
+                        </div>
+
+                        <button type="button" class="enroll-btn" id="enroll-submit">
+                            <span class="pixel-text-middle-white">Enroll</span>
+                        </button>
+                    </form>   
                 
                 </section>
         

@@ -4,6 +4,7 @@ import { SearchController } from "./search.js";
 import { FilterController } from "./filter.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
+    try{
         const res = await http.get("/api/carousel");
         const items = res.data;
 
@@ -17,6 +18,11 @@ document.addEventListener("DOMContentLoaded", async () => {
                 </a>
             </div>
         `).join("");
+    }catch (e) {
+        console.error("Carousel init error:", e);
+    }
+
+        
 
         const categoriesLeftBtn = document.querySelector(".categories-left");
         const categoriesRightBtn = document.querySelector(".categories-right");

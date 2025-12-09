@@ -1,0 +1,67 @@
+{
+  "users": [
+    {
+      "id": "5a36",
+      "courseTitle": "HTML & CSS for beginners",
+      "email": "chorna.magia.13@gmail.com",
+      "payment": "full",
+      "createdAt": "2025-12-09T20:21:13.597Z"
+    },
+    {
+      "id": "3e01",
+      "courseTitle": "HTML & CSS for beginners",
+      "email": "chorna.magia.13@gmail.com",
+      "payment": "full",
+      "createdAt": "2025-12-09T20:23:10.142Z"
+    },
+    {
+      "id": "b52f",
+      "courseTitle": "HTML & CSS for beginners",
+      "email": "chorna.magia.13@gmail.com",
+      "payment": "full",
+      "createdAt": "2025-12-09T20:23:12.646Z"
+    },
+    {
+      "id": "c21b",
+      "courseTitle": "HTML & CSS for beginners",
+      "email": "chorna.magia.13@gmail.com",
+      "payment": "full",
+      "createdAt": "2025-12-09T20:23:15.229Z"
+    },
+    {
+      "id": "6739",
+      "courseTitle": "HTML & CSS for beginners",
+      "email": "chorna.magia.13@gmail.com",
+      "payment": "full",
+      "createdAt": "2025-12-09T20:23:39.301Z"
+    },
+    {
+      "id": "024a",
+      "courseTitle": "HTML & CSS for beginners",
+      "email": "chorna.magia.13@gmail.com",
+      "payment": "full",
+      "createdAt": "2025-12-09T20:24:13.359Z"
+    },
+    {
+      "id": "ed5d",
+      "courseTitle": "HTML & CSS for beginners",
+      "email": "chorna.magia.13@gmail.com",
+      "payment": "full",
+      "createdAt": "2025-12-09T20:24:13.665Z"
+    },
+    {
+      "id": "134d",
+      "courseTitle": "HTML & CSS for beginners",
+      "email": "chorna.magia.13@gmail.com",
+      "payment": "full",
+      "createdAt": "2025-12-09T20:24:13.861Z"
+    },
+    {
+      "id": "73e8",
+      "courseTitle": "HTML & CSS for beginners",
+      "email": "chorna.magia.13@gmail.com",
+      "payment": "full",
+      "createdAt": "2025-12-09T20:27:42.486Z"
+    }
+  ]
+}

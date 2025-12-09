@@ -24,7 +24,6 @@ export class FilterController{
                 }
 
                 this.courseCard.forEach(card => {
-                    //const cardCategory = card.dataset.category;
         
                     const matches = this.selected.has(card.dataset.category) 
                         || this.selected.has(card.dataset.level)
