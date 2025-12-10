@@ -4,11 +4,15 @@ import { SearchController } from "./search.js";
 import { FilterController } from "./filter.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
+    const categoriesLeftBtn = document.querySelector(".categories-left");
+    const categoriesRightBtn = document.querySelector(".categories-right");
+    const categoriesContainer = document.querySelector(".carousel-categories");
+
     try{
         const res = await http.get("/api/carousel");
         const items = res.data;
 
-        const categoriesContainer = document.querySelector(".carousel-categories");
+        
 
         categoriesContainer.innerHTML = items.map(item => `
             <div>
@@ -23,9 +27,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
         
-
-        const categoriesLeftBtn = document.querySelector(".categories-left");
-        const categoriesRightBtn = document.querySelector(".categories-right");
         
         if (categoriesLeftBtn && categoriesRightBtn) {
             const categoriesController = new CarouselController(
@@ -47,21 +48,6 @@ document.addEventListener("DOMContentLoaded", async () => {
             coursesRightBtn
         );
         coursesController.init();
-    }
-
-    const input = document.querySelector(".search-input");
-    const button = document.querySelector(".search-btn");
-
-    if (input && button){
-        const search = new SearchController(input, button);
-        search.init()
-    }
-
-    const filterEls = document.querySelectorAll("[data-filter]");
-    const courseCards  = document.querySelectorAll("[data-category]");
-    if (filterEls.length && courseCards.length) {
-        const filterController = new FilterController(filterEls, courseCards);
-        filterController.init();
     }
 
 });

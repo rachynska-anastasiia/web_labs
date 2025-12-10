@@ -29,3 +29,13 @@ export class SearchController {
         })
     }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    const input = document.querySelector(".search-input");
+    const button = document.querySelector(".search-btn");
+
+    if (input && button){
+        const search = new SearchController(input, button);
+        search.init()
+    }
+});

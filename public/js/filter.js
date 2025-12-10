@@ -35,3 +35,12 @@ export class FilterController{
         })
     }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    const filterEls = document.querySelectorAll("[data-filter]");
+    const courseCards  = document.querySelectorAll("[data-category]");
+    if (filterEls.length && courseCards.length) {
+        const filterController = new FilterController(filterEls, courseCards);
+        filterController.init();
+    }
+});
